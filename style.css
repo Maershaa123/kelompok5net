@@ -5,33 +5,29 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* BODY */
 body {
-  min-height: 100vh;
   background: linear-gradient(135deg, #f6efe6, #e7d7c3);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* CONTAINER */
 .container {
   width: 100%;
   max-width: 420px;
   background: #fffaf3;
-  border-radius: 30px;
-  padding: 28px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  border-radius: 28px;
+  padding: 26px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.25);
 }
 
-/* LOGO */
 .logo {
   width: 150px;
   display: block;
-  margin: 0 auto 10px;
+  margin: auto;
 }
 
-/* SUBTITLE */
 .subtitle {
   text-align: center;
   font-size: 14px;
@@ -39,30 +35,30 @@ body {
   margin-bottom: 6px;
 }
 
-/* RUNNING TEXT */
 .running {
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
+
 .running span {
   display: inline-block;
   white-space: nowrap;
-  font-size: 14px;
-  color: #6b4f2d;
   animation: jalan 12s linear infinite;
+  color: #6b4f2d;
+  font-size: 14px;
 }
+
 @keyframes jalan {
   from { transform: translateX(100%); }
   to { transform: translateX(-100%); }
 }
 
-/* CARD */
 .card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 22px;
-  margin-bottom: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  background: white;
+  padding: 18px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,.12);
 }
 
 .card input {
@@ -73,7 +69,6 @@ body {
   border: 1px solid #e0cdb2;
 }
 
-/* BUTTONS */
 .btn-row {
   display: flex;
   gap: 10px;
@@ -82,92 +77,113 @@ body {
 .btn-login {
   flex: 1;
   background: #6b4f2d;
-  color: #fff;
+  color: white;
   border: none;
   padding: 14px;
   border-radius: 14px;
-  font-weight: 600;
 }
 
 .btn-reset {
   flex: 1;
   background: #d6c1a1;
-  color: #5b4327;
   border: none;
   padding: 14px;
   border-radius: 14px;
-  font-weight: 600;
 }
 
-/* LINKS */
 .links {
   text-align: center;
-  margin-top: 12px;
   font-size: 13px;
+  margin-top: 10px;
 }
+
 .links a {
   color: #6b4f2d;
   text-decoration: none;
 }
 
-/* TITLE */
 h2 {
   text-align: center;
-  font-size: 20px;
   color: #6b4f2d;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-/* VOUCHER */
 .voucher {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 18px;
-  margin-bottom: 14px;
+  background: white;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
 }
 
-.voucher strong {
-  font-size: 15px;
-  color: #6b4f2d;
-}
-
-.voucher p {
-  font-size: 14px;
-  color: #8b6a44;
-}
-
-/* DANA */
 .btn-dana {
   background: #00bfa5;
-  color: #fff;
-  padding: 10px 16px;
+  color: white;
+  padding: 10px 14px;
   border-radius: 12px;
-  text-decoration: none;
+  border: none;
   font-size: 13px;
-  font-weight: 600;
 }
 
-/* WHATSAPP */
 .wa {
   display: block;
   text-align: center;
   background: #25D366;
-  color: #fff;
+  color: white;
   padding: 14px;
   border-radius: 18px;
   text-decoration: none;
   margin-top: 20px;
-  font-weight: 600;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   font-size: 12px;
   color: #8b6a44;
-  margin-top: 18px;
+  margin-top: 16px;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 22px;
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+.popup-btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.lanjut {
+  flex: 1;
+  background: #00bfa5;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.batal {
+  flex: 1;
+  background: #ccc;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
 }
