@@ -1,175 +1,126 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #1e3c72, #0f2027);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+    margin: 0;
+    background: linear-gradient(135deg, #e6f0ff, #f8fbff);
+    color: #1f2d3d;
 }
 
-/* CONTAINER */
 .container {
-  width: 400px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05));
-  backdrop-filter: blur(18px);
-  border-radius: 26px;
-  padding: 30px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
 }
 
-/* LOGO */
 .logo {
-  text-align: center;
-  margin-bottom: 25px;
+    width: 180px;
+    margin: 20px auto;
+    display: block;
 }
 
-.logo-wrap {
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 40px rgba(0,198,255,0.7);
+h1 {
+    margin: 10px 0 5px;
 }
 
-.logo-wrap img {
-  width: 120px;
+.subtitle {
+    color: #2e8cff;
+    font-size: 14px;
 }
 
-.logo h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 5px;
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-top: 20px;
 }
 
-/* RUNNING TEXT */
-.running-text {
-  overflow: hidden;
-  margin-top: 6px;
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #dce3ec;
 }
 
-.running-text span {
-  font-size: 13px;
-  color: #7fffd4;
-  white-space: nowrap;
-  animation: jalan 12s linear infinite;
+.btn-group {
+    display: flex;
+    gap: 10px;
 }
 
-@keyframes jalan {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+.btn-primary {
+    flex: 1;
+    padding: 12px;
+    background: #2e8cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
 }
 
-/* LOGIN */
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
+.btn-secondary {
+    flex: 1;
+    padding: 12px;
+    background: #e9eef5;
+    border: none;
+    border-radius: 8px;
 }
 
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  border-radius: 14px;
-  border: none;
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-  font-weight: bold;
-  cursor: pointer;
+.links {
+    margin-top: 10px;
+    font-size: 13px;
 }
 
-.reset-btn {
-  width: 100%;
-  padding: 10px;
-  border-radius: 14px;
-  border: none;
-  background: #ccc;
-  margin-top: 6px;
+.links a {
+    text-decoration: none;
+    color: #2e8cff;
 }
 
-.login-links {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  margin-top: 8px;
+h2 {
+    margin-top: 30px;
 }
 
-.login-links a {
-  color: #7fffd4;
-  text-decoration: none;
+.voucher {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* PRICE */
-.price-list h3 {
-  text-align: center;
-  margin: 20px 0 12px;
+.voucher span {
+    color: #2e8cff;
+    font-weight: bold;
 }
 
-.price-card {
-  background: rgba(255,255,255,0.12);
-  border-radius: 16px;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.btn-dana {
+    background: #00a3ff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
 }
 
-.price-card.internet {
-  border-left: 5px solid #00c6ff;
+.wa-float {
+    display: block;
+    margin: 25px auto;
+    background: #25d366;
+    color: white;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.price-card.gaming {
-  border-left: 5px solid #ffb347;
-}
-
-.price-card h4 {
-  font-size: 15px;
-}
-
-.price-card p {
-  font-size: 12px;
-  opacity: 0.85;
-}
-
-.right span {
-  display: block;
-  font-weight: bold;
-}
-
-.buy-btn {
-  display: inline-block;
-  margin-top: 6px;
-  padding: 6px 14px;
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-/* INFO */
-.info {
-  text-align: center;
-  font-size: 12px;
-  margin-top: 15px;
-}
-
-/* FOOTER */
 footer {
-  text-align: center;
-  font-size: 11px;
-  margin-top: 12px;
-  opacity: 0.8;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #7a8ca5;
 }
