@@ -5,7 +5,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* BODY */
 body {
   min-height: 100vh;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -31,7 +30,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* LOGO K5 */
 .logo-circle {
   width: 80px;
   height: 80px;
@@ -45,7 +43,6 @@ body {
   position: relative;
 }
 
-/* Glow ring */
 .logo-circle::before {
   content: "";
   position: absolute;
@@ -61,14 +58,12 @@ body {
 .logo-circle span {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
   letter-spacing: 2px;
 }
 
 .logo h2 {
   margin-top: 12px;
   font-size: 22px;
-  font-weight: 600;
 }
 
 /* RUNNING TEXT */
@@ -82,7 +77,6 @@ body {
   display: inline-block;
   white-space: nowrap;
   font-size: 13px;
-  font-weight: 500;
   color: #ffecd2;
   animation: jalan 10s linear infinite;
 }
@@ -102,9 +96,7 @@ body {
   padding: 12px;
   border-radius: 12px;
   border: none;
-  outline: none;
   margin-bottom: 12px;
-  font-size: 14px;
 }
 
 .login-box button {
@@ -116,19 +108,12 @@ body {
   color: #764ba2;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.login-box button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* DAFTAR HARGA */
+/* PRICE LIST */
 .price-list h3 {
   text-align: center;
   margin-bottom: 15px;
-  font-size: 18px;
 }
 
 .price-card {
@@ -137,26 +122,9 @@ body {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 12px;
-  transition: 0.3s;
 }
 
-.price-card:hover {
-  transform: scale(1.02);
-}
-
-.price-card h4 {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.price-card p {
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-/* WARNA KHUSUS */
 .price-card.internet {
   border-left: 4px solid #4facfe;
 }
@@ -165,18 +133,12 @@ body {
   border-left: 4px solid #f093fb;
 }
 
-/* BAGIAN KANAN */
 .price-card .right {
   text-align: right;
 }
 
-.price-card .right span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
 .price-card button {
+  margin-top: 6px;
   padding: 6px 14px;
   border-radius: 10px;
   border: none;
@@ -184,9 +146,4 @@ body {
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.price-card button:hover {
-  transform: scale(1.05);
 }
