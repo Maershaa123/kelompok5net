@@ -1,144 +1,135 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #020617, #020617);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #e5e7eb;
+body{
+  min-height:100vh;
+  background: linear-gradient(135deg,#e0f2ff,#fdfcff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.container {
-  width: 380px;
-  background: #020617;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.6);
+.container{
+  width:380px;
+  background:#ffffff;
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.15);
 }
 
 /* LOGO */
-.logo {
-  text-align: center;
-  margin-bottom: 25px;
+.logo{
+  text-align:center;
+  margin-bottom:20px;
 }
 
-.logo-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+.logo img{
+  width:90px;
+  margin-bottom:10px;
 }
 
-.logo-circle span {
-  font-size: 30px;
-  font-weight: 700;
-  color: #020617;
-}
-
-.logo h1 {
-  margin-top: 12px;
-  font-size: 22px;
+.logo h2{
+  font-size:22px;
+  color:#2b6cb0;
 }
 
 /* RUNNING TEXT */
-.running-text {
-  margin-top: 6px;
-  overflow: hidden;
+.running-text{
+  overflow:hidden;
+  margin-top:6px;
 }
 
-.running-text span {
-  white-space: nowrap;
-  font-size: 12px;
-  color: #94a3b8;
-  animation: jalan 10s linear infinite;
+.running-text span{
+  display:inline-block;
+  white-space:nowrap;
+  font-size:13px;
+  color:#444;
+  animation:jalan 12s linear infinite;
 }
 
-@keyframes jalan {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+@keyframes jalan{
+  from{transform:translateX(100%);}
+  to{transform:translateX(-100%);}
 }
 
 /* LOGIN */
-.login-box {
-  margin-bottom: 25px;
+.login-box input{
+  width:100%;
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:12px;
+  border:1px solid #ddd;
 }
 
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  margin-bottom: 10px;
+.login-box button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:#2b6cb0;
+  color:#fff;
+  font-weight:bold;
 }
 
-.login-box button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 14px;
-  border: none;
-  background: #0ea5e9;
-  color: #020617;
-  font-weight: 700;
+/* WA */
+.wa-admin{
+  display:block;
+  margin:14px 0;
+  text-align:center;
+  padding:10px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:14px;
+  font-weight:bold;
 }
 
-/* PRICE LIST */
-.price-list h2 {
-  text-align: center;
-  margin-bottom: 15px;
+/* PRICE */
+.price-list h3{
+  text-align:center;
+  margin:18px 0;
+  color:#333;
 }
 
-.price-card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 14px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
+.price-card{
+  background:#f7fafc;
+  padding:14px;
+  border-radius:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
 }
 
-.price-card.internet { border-left: 4px solid #38bdf8; }
-.price-card.gaming { border-left: 4px solid #22c55e; }
-
-.info h3 { font-size: 14px; }
-.info p { font-size: 12px; color: #94a3b8; }
-
-.action {
-  text-align: right;
+.price-card.gaming{
+  border-left:4px solid #38b2ac;
 }
 
-.action span {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 6px;
+.price-card h4{
+  font-size:14px;
 }
 
-.btn {
-  display: block;
-  text-decoration: none;
-  font-size: 12px;
-  padding: 6px;
-  border-radius: 8px;
-  margin-bottom: 5px;
-  text-align: center;
+.price-card p{
+  font-size:12px;
+  color:#666;
 }
 
-.btn.dana {
-  background: #2563eb;
-  color: #fff;
+.right span{
+  display:block;
+  font-weight:bold;
+  margin-bottom:6px;
 }
 
-.btn.wa {
-  background: #22c55e;
-  color: #020617;
+.dana{
+  display:inline-block;
+  padding:6px 12px;
+  background:#0bbcd6;
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  font-size:12px;
 }
