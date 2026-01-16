@@ -2,158 +2,80 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg,#667eea,#764ba2);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
 }
 
-/* CONTAINER */
 .container {
   width: 380px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(14px);
-  border-radius: 22px;
-  padding: 30px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
 }
 
-/* LOGO */
 .logo {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.logo-circle {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  position: relative;
-}
-
-.logo-circle::before {
-  content: "";
-  position: absolute;
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-  z-index: -1;
-  filter: blur(14px);
-}
-
-.logo-circle span {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 2px;
+.logo img {
+  width: 90px;
+  margin-bottom: 10px;
 }
 
 .logo h2 {
-  margin-top: 12px;
   font-size: 22px;
-}
-
-/* RUNNING TEXT */
-.running-text {
-  overflow: hidden;
-  margin-top: 6px;
-}
-
-.running-text span {
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 13px;
-  color: #ffecd2;
-  animation: jalan 10s linear infinite;
-}
-
-@keyframes jalan {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-/* LOGIN */
-.login-box {
-  margin-bottom: 20px;
 }
 
 .login-box input {
   width: 100%;
   padding: 12px;
-  border-radius: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
   border: none;
-  margin-bottom: 12px;
 }
 
 .login-box button {
   width: 100%;
   padding: 12px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: none;
-  background: linear-gradient(135deg, #ffecd2, #fcb69f);
-  color: #764ba2;
+  background: #ffecd2;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* INFO BAYAR */
-.info-bayar {
+.judul {
   text-align: center;
-  font-size: 13px;
-  margin-bottom: 15px;
-  opacity: 0.9;
-}
-
-/* DAFTAR HARGA */
-.price-list h3 {
-  text-align: center;
-  margin-bottom: 15px;
+  margin: 20px 0;
 }
 
 .price-card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 15px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 12px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .price-card.internet { border-left: 4px solid #4facfe; }
 .price-card.gaming { border-left: 4px solid #f093fb; }
 
-.price-card h4 { font-size: 15px; }
-.price-card p { font-size: 12px; opacity: 0.8; }
-
-.price-card .right {
-  text-align: right;
-}
-
-.price-card .right span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
 .price-card button {
   padding: 6px 14px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-  font-size: 12px;
+  background: #43e97b;
   font-weight: bold;
   cursor: pointer;
 }
