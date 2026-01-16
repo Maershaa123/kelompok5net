@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIVENET 5</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- PENTING: cache HP -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+
+  <link rel="stylesheet" href="style.css?v=FINAL">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,12 +18,14 @@
 <div class="container">
 
   <img src="logo.png" class="logo" alt="Logo FIVENET 5">
+
   <div class="subtitle">Teknik Komputer • Kelompok 5</div>
 
   <div class="running">
     <span>✨ Selamat Datang di FIVENET 5 • Warnet Modern • Cepat • Nyaman • Murah ✨</span>
   </div>
 
+  <!-- LOGIN -->
   <div class="card">
     <input type="text" placeholder="Username">
     <input type="password" placeholder="Password">
@@ -30,10 +37,12 @@
 
     <div class="links">
       <a href="#">Lupa Password?</a> |
-      <a href="https://wa.me/6281937016932" target="_blank">Hubungi CS</a>
+      <a href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%20saya%20ingin%20menghubungi%20CS."
+         target="_blank">Hubungi CS</a>
     </div>
   </div>
 
+  <!-- VOUCHER INPUT -->
   <div class="card">
     <input type="text" placeholder="Masukkan Kode Voucher">
     <button class="btn-login">Gunakan Voucher</button>
@@ -41,37 +50,76 @@
 
   <h2>Paket Voucher</h2>
 
-  <!-- VOUCHER -->
+  <!-- ===== VOUCHER 1 ===== -->
   <div class="voucher">
     <div>
       <strong>Internet 1 Jam</strong>
       <p>Rp 2.000</p>
     </div>
-    <button class="btn-dana" onclick="openDana()">Bayar via DANA</button>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">
+          Lanjut Bayar
+        </a>
+        <span class="batal">Batal</span>
+      </div>
+    </details>
   </div>
 
+  <!-- ===== VOUCHER 2 ===== -->
   <div class="voucher">
     <div>
       <strong>Internet 2 Jam</strong>
       <p>Rp 4.000</p>
     </div>
-    <button class="btn-dana" onclick="openDana()">Bayar via DANA</button>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">
+          Lanjut Bayar
+        </a>
+        <span class="batal">Batal</span>
+      </div>
+    </details>
   </div>
 
+  <!-- ===== VOUCHER 3 ===== -->
   <div class="voucher">
     <div>
       <strong>Internet 5 Jam</strong>
       <p>Rp 10.000</p>
     </div>
-    <button class="btn-dana" onclick="openDana()">Bayar via DANA</button>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">
+          Lanjut Bayar
+        </a>
+        <span class="batal">Batal</span>
+      </div>
+    </details>
   </div>
 
+  <!-- ===== VOUCHER 4 ===== -->
   <div class="voucher">
     <div>
       <strong>Internet 10 Jam</strong>
       <p>Rp 18.000</p>
     </div>
-    <button class="btn-dana" onclick="openDana()">Bayar via DANA</button>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">
+          Lanjut Bayar
+        </a>
+        <span class="batal">Batal</span>
+      </div>
+    </details>
   </div>
 
   <a class="wa"
@@ -81,28 +129,8 @@
   </a>
 
   <footer>© 2026 FIVENET 5 • All Rights Reserved</footer>
-</div>
 
-<!-- POPUP DANA -->
-<div class="popup" id="popupDana">
-  <div class="popup-box">
-    <h3>Konfirmasi Pembayaran</h3>
-    <p>Lanjutkan pembayaran via DANA?</p>
-    <div class="popup-btn">
-      <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
-      <button class="batal" onclick="closeDana()">Batal</button>
-    </div>
-  </div>
 </div>
-
-<script>
-function openDana() {
-  document.getElementById("popupDana").style.display = "flex";
-}
-function closeDana() {
-  document.getElementById("popupDana").style.display = "none";
-}
-</script>
 
 </body>
 </html>
