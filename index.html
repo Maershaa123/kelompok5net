@@ -5,92 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FIVENET 5</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#fdf6e3;color:#4e342e;padding:20px}
-.container{max-width:420px;width:95%;margin:auto;background:#fff8f0;border-radius:14px;padding:20px;box-shadow:0 8px 25px rgba(0,0,0,.15)}
-
-.logo{width:120px;display:block;margin:auto}
-.subtitle{text-align:center;color:#6d4c41;margin:6px 0;font-weight:600;font-size:14px}
-
-/* RUNNING TEXT */
-.running-text{
-  background:#d7ccc8;
-  color:#4e342e;
-  border-radius:10px;
-  overflow:hidden;
-  white-space:nowrap;
-  box-shadow:0 2px 5px rgba(0,0,0,.1);
-  margin:10px 0;
-  padding:6px 10px;
-  font-weight:500;
-}
-.running-text span{
-  display:inline-block;
-  padding-left:100%;
-  animation: marquee 15s linear infinite;
-}
-@keyframes marquee{
-  0%{transform:translateX(100%);}
-  100%{transform:translateX(-100%);}
-}
-
-/* TABS */
-.tabs{display:flex;gap:6px;margin:15px 0}
-.tab{flex:1;padding:10px;border:none;border-radius:8px;background:#d7ccc8;font-weight:600;color:#4e342e;cursor:pointer;transition:.2s}
-.tab.active{background:#8d6e63;color:#fff}
-
-/* SECTIONS */
-.section{display:none}
-.section.active{display:block}
-
-/* CARD INPUT */
-.card{background:#fff3e0;padding:15px;border-radius:12px;margin-bottom:15px;box-shadow:0 3px 10px rgba(0,0,0,.05)}
-input{width:100%;padding:10px;border-radius:8px;border:1px solid #d7ccc8;background:#fffaf0;margin-bottom:10px}
-.btn{width:100%;padding:12px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:.2s}
-.btn-login{background:#8d6e63;color:#fff}
-.btn-login:hover{background:#7b5e57}
-.btn-voucher{background:#a1887f;color:#fff}
-.btn-voucher:hover{background:#8d6e63}
-.links{text-align:center;font-size:13px;margin-top:8px}
-.links a{text-decoration:none;color:#6d4c41;margin:0 5px}
-.links a:hover{text-decoration:underline}
-
-/* VOUCHER LIST */
-.voucher{background:#f5f5dc;border:2px solid #d2b48c;border-radius:12px;padding:12px;margin-bottom:12px;transition:.2s;position:relative}
-.voucher:hover{background:#f0e6d2;box-shadow:0 4px 15px rgba(0,0,0,.1)}
-.voucher h4{margin-bottom:6px;color:#4e342e;font-weight:600}
-.voucher p{font-size:14px;margin-bottom:8px;color:#5d4037}
-
-/* PAYMENT BUTTON */
-.pay a{display:inline-block;margin:4px 4px 0 0;padding:6px 12px;border-radius:6px;background:#6d4c41;color:#fff;text-decoration:none;font-size:13px;transition:.2s}
-.pay a:hover{background:#5d4037}
-
-/* KONFIRMASI POPUP */
-.confirmation{display:none;background:#fff3e0;padding:12px;border:2px solid #d2b48c;border-radius:10px;margin-top:8px}
-.confirmation a{display:inline-block;margin-right:8px;padding:6px 10px;border-radius:6px;background:#8d6e63;color:#fff;text-decoration:none;font-size:13px}
-.confirmation .batal{display:inline-block;margin-right:8px;padding:6px 10px;border-radius:6px;background:#a1887f;color:#fff;font-size:13px;cursor:pointer}
-
-/* WA BUTTON */
-.wa{display:block;margin-top:12px;text-align:center;background:#5d4037;color:#fff;padding:12px;border-radius:10px;font-weight:600;text-decoration:none;transition:.2s}
-.wa:hover{background:#4e342e}
-
-/* FOOTER */
-footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
-
-/* RESET & FORGOT PASSWORD */
-.reset-link{display:block;text-align:center;margin-top:8px;font-size:13px}
-.reset-link a{color:#6d4c41;text-decoration:none;font-weight:500}
-.reset-link a:hover{text-decoration:underline}
-
-/* MEDIA QUERY MOBILE */
-@media(max-width:420px){
-  .container{padding:15px;}
-  .logo{width:100px;}
-  .tab{padding:8px;font-size:13px;}
-  .btn{padding:10px;}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -106,7 +21,6 @@ footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
   <button class="tab" onclick="openTab(event,'daftar')">Daftar Voucher</button>
 </div>
 
-<!-- MEMBER LOGIN -->
 <div id="member" class="section active">
   <div class="card">
     <input type="text" placeholder="Username">
@@ -119,7 +33,6 @@ footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
   </div>
 </div>
 
-<!-- INPUT VOUCHER -->
 <div id="voucher" class="section">
   <div class="card">
     <input type="text" placeholder="Masukkan Kode Voucher">
@@ -127,10 +40,7 @@ footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
   </div>
 </div>
 
-<!-- DAFTAR VOUCHER -->
 <div id="daftar" class="section">
-
-  <!-- Voucher Example -->
   <div class="voucher">
     <h4>⏱️ Voucher 12 Jam</h4>
     <p>Harga : Rp 2.000</p>
@@ -145,7 +55,6 @@ footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
       <div class="batal">Batal</div>
     </div>
   </div>
-
   <div class="voucher">
     <h4>📅 Voucher 2 Hari</h4>
     <p>Harga : Rp 5.000</p>
@@ -160,7 +69,6 @@ footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
       <div class="batal">Batal</div>
     </div>
   </div>
-
   <div class="voucher">
     <h4>📅 Voucher 5 Hari</h4>
     <p>Harga : Rp 10.000</p>
@@ -175,13 +83,9 @@ footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
       <div class="batal">Batal</div>
     </div>
   </div>
-
 </div>
 
-<a class="wa" href="https://wa.me/6281937016932" target="_blank">
-💬 Hubungi Admin
-</a>
-
+<a class="wa" href="https://wa.me/6281937016932" target="_blank">💬 Hubungi Admin</a>
 <footer>© 2026 FIVENET 5</footer>
 
 <script>
@@ -216,5 +120,6 @@ function showConfirm(el,paket,harga,metode){
   }
 }
 </script>
+
 </body>
 </html>
