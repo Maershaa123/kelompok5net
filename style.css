@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,29 +6,35 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
-  background: linear-gradient(135deg, #f6efe6, #e7d7c3);
   min-height: 100vh;
+  background: linear-gradient(135deg, #f6efe6, #e7d7c3);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
+/* CONTAINER */
 .container {
   width: 100%;
   max-width: 420px;
   background: #fffaf3;
-  border-radius: 28px;
+  border-radius: 32px;
   padding: 26px;
-  box-shadow: 0 25px 60px rgba(0,0,0,.25);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
+/* LOGO */
 .logo {
-  width: 150px;
   display: block;
-  margin: auto;
+  width: 170px;
+  max-width: 100%;
+  margin: 0 auto 10px;
 }
 
+/* SUBTITLE */
 .subtitle {
   text-align: center;
   font-size: 14px;
@@ -35,17 +42,19 @@ body {
   margin-bottom: 6px;
 }
 
+/* RUNNING TEXT */
 .running {
+  width: 100%;
   overflow: hidden;
-  margin-bottom: 18px;
+  margin: 12px 0 24px;
 }
 
 .running span {
   display: inline-block;
   white-space: nowrap;
-  animation: jalan 12s linear infinite;
-  color: #6b4f2d;
   font-size: 14px;
+  color: #8b6a44;
+  animation: jalan 12s linear infinite;
 }
 
 @keyframes jalan {
@@ -53,137 +62,194 @@ body {
   to { transform: translateX(-100%); }
 }
 
+/* CARD */
 .card {
-  background: white;
-  padding: 18px;
-  border-radius: 20px;
-  margin-bottom: 18px;
-  box-shadow: 0 12px 25px rgba(0,0,0,.12);
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
+/* INPUT */
 .card input {
   width: 100%;
-  padding: 14px;
+  padding: 14px 16px;
   margin-bottom: 12px;
   border-radius: 14px;
   border: 1px solid #e0cdb2;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
 }
 
+.card input::placeholder {
+  color: #b7a28a;
+}
+
+/* BUTTON ROW */
 .btn-row {
   display: flex;
   gap: 10px;
+  margin-top: 6px;
 }
 
 .btn-login {
   flex: 1;
   background: #6b4f2d;
-  color: white;
+  color: #fff;
   border: none;
   padding: 14px;
   border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-reset {
   flex: 1;
   background: #d6c1a1;
+  color: #5b4327;
   border: none;
   padding: 14px;
   border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
+/* LINKS */
 .links {
   text-align: center;
+  margin-top: 14px;
   font-size: 13px;
-  margin-top: 10px;
 }
 
 .links a {
   color: #6b4f2d;
   text-decoration: none;
+  font-weight: 500;
 }
 
+/* TITLE */
 h2 {
   text-align: center;
+  font-size: 20px;
   color: #6b4f2d;
-  margin-bottom: 14px;
+  margin: 16px 0;
 }
 
+/* VOUCHER CARD */
 .voucher {
-  background: white;
-  border-radius: 18px;
-  padding: 16px;
-  margin-bottom: 12px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 18px;
+  margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
+.voucher strong {
+  font-size: 15px;
+  color: #6b4f2d;
+}
+
+.voucher p {
+  font-size: 14px;
+  color: #8b6a44;
+  margin-top: 4px;
+}
+
+/* DANA BUTTON */
 .btn-dana {
   background: #00bfa5;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: none;
-  font-size: 13px;
-}
-
-.wa {
-  display: block;
-  text-align: center;
-  background: #25D366;
-  color: white;
-  padding: 14px;
-  border-radius: 18px;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 14px;
   text-decoration: none;
-  margin-top: 20px;
-}
-
-footer {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
   text-align: center;
-  font-size: 12px;
-  color: #8b6a44;
-  margin-top: 16px;
 }
 
-/* POPUP */
-.popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.5);
+/* DETAILS (LANJUT / BATAL) */
+details {
+  width: auto;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
   display: none;
-  justify-content: center;
-  align-items: center;
 }
 
-.popup-box {
-  background: white;
-  padding: 22px;
-  border-radius: 20px;
-  text-align: center;
-  width: 80%;
-  max-width: 300px;
-}
-
-.popup-btn {
+/* CONFIRM BOX */
+.confirm {
+  margin-top: 10px;
   display: flex;
-  gap: 10px;
-  margin-top: 16px;
+  gap: 8px;
 }
 
 .lanjut {
   flex: 1;
   background: #00bfa5;
-  color: white;
-  padding: 12px;
+  color: #fff;
+  padding: 9px;
   border-radius: 12px;
+  text-align: center;
   text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .batal {
   flex: 1;
-  background: #ccc;
-  border: none;
-  padding: 12px;
+  background: #ddd;
+  color: #333;
+  padding: 9px;
   border-radius: 12px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* WHATSAPP */
+.wa {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #25D366;
+  color: #fff;
+  padding: 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 22px;
+  font-weight: 600;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #8b6a44;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .container {
+    padding: 22px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
 }
