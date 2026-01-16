@@ -1,136 +1,255 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>FIVENET 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #0f2027, #203a43, #000);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #e0e0e0;
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
 }
 
-.container {
-  width: 380px;
-  background: rgba(0,0,0,0.65);
-  border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 0 30px rgba(0,255,255,0.15);
+/* CONTAINER */
+.container{
+  width:380px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(14px);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 25px 60px rgba(0,0,0,.4);
 }
 
 /* LOGO */
-.logo {
-  text-align: center;
-  margin-bottom: 20px;
+.logo{
+  text-align:center;
+  margin-bottom:20px;
 }
 
-.logo img {
-  width: 80px;
-  margin-bottom: 10px;
+.logo-circle{
+  width:90px;
+  height:90px;
+  margin:0 auto;
+  border-radius:50%;
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 30px rgba(0,198,255,.7);
 }
 
-.logo h2 {
-  font-weight: 600;
+.logo-circle span{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:2px;
 }
 
-.logo marquee {
-  font-size: 12px;
-  color: #00e5ff;
+.logo h2{
+  margin-top:12px;
+  font-size:22px;
+  font-weight:600;
+}
+
+/* RUNNING TEXT */
+.running{
+  overflow:hidden;
+  margin-top:6px;
+}
+
+.running span{
+  display:inline-block;
+  white-space:nowrap;
+  font-size:13px;
+  color:#9be7ff;
+  animation:jalan 10s linear infinite;
+}
+
+@keyframes jalan{
+  0%{transform:translateX(100%)}
+  100%{transform:translateX(-100%)}
 }
 
 /* LOGIN */
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
+.login-box{
+  margin:20px 0;
 }
 
-.login-box button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #00e5ff, #00bcd4);
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
+.login-box input{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:none;
+  outline:none;
+  margin-bottom:10px;
+}
+
+.login-box button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
 }
 
 /* PRICE */
-.price-list h3 {
-  text-align: center;
-  margin: 15px 0;
+.price-list h3{
+  text-align:center;
+  margin-bottom:12px;
 }
 
-.price-card {
-  background: rgba(255,255,255,0.08);
-  border-left: 4px solid #00e5ff;
-  border-radius: 14px;
-  padding: 12px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.card{
+  background:rgba(255,255,255,0.15);
+  border-radius:14px;
+  padding:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
 }
 
-.price-card.gaming {
-  border-left-color: #ff5252;
-}
+.card.internet{border-left:4px solid #00c6ff}
+.card.gaming{border-left:4px solid #f093fb}
 
-.price-card h4 {
-  font-size: 14px;
-}
+.card h4{font-size:14px}
+.card p{font-size:12px;opacity:.8}
 
-.price-card p {
-  font-size: 11px;
-  opacity: 0.8;
-}
+.right{text-align:right}
+.right span{font-weight:600}
 
-.right {
-  text-align: right;
-}
-
-.right span {
-  font-weight: bold;
-  display: block;
-}
-
-.buy {
-  display: inline-block;
-  margin-top: 5px;
-  padding: 6px 14px;
-  background: #00e676;
-  color: #000;
-  border-radius: 8px;
-  font-size: 12px;
-  text-decoration: none;
+.right button{
+  margin-top:6px;
+  padding:6px 14px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#43e97b,#38f9d7);
+  font-size:12px;
+  font-weight:600;
+  cursor:pointer;
 }
 
 /* PAYMENT */
-.payment {
-  margin-top: 15px;
-  text-align: center;
+.payment{
+  margin-top:15px;
+  text-align:center;
+  font-size:12px;
+  opacity:.9;
 }
+</style>
+</head>
 
-.payment span {
-  display: inline-block;
-  margin: 5px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: #111;
-  border: 1px solid #00e5ff;
-  font-size: 12px;
-}
+<body>
+<div class="container">
 
-.note {
-  font-size: 11px;
-  opacity: 0.7;
-  margin-top: 5px;
+<!-- LOGO -->
+<div class="logo">
+  <div class="logo-circle">
+    <span>FN5</span>
+  </div>
+  <h2>FIVENET 5</h2>
+  <div class="running">
+    <span>⚙️ Selamat Datang di FIVENET 5 • Warnet Teknik • Cepat • Stabil • Terpercaya ⚙️</span>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div class="login-box">
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button>Login</button>
+</div>
+
+<!-- HARGA -->
+<div class="price-list">
+<h3>Daftar Harga Voucher</h3>
+
+<div class="card internet">
+  <div>
+    <h4>Voucher Internet</h4>
+    <p>Durasi 1 Jam</p>
+  </div>
+  <div class="right">
+    <span>Rp 5.000</span>
+    <button onclick="beli('Internet 1 Jam',5000)">Beli</button>
+  </div>
+</div>
+
+<div class="card internet">
+  <div>
+    <h4>Voucher Internet</h4>
+    <p>Durasi 2 Jam</p>
+  </div>
+  <div class="right">
+    <span>Rp 9.000</span>
+    <button onclick="beli('Internet 2 Jam',9000)">Beli</button>
+  </div>
+</div>
+
+<div class="card internet">
+  <div>
+    <h4>Voucher Internet</h4>
+    <p>Durasi 5 Jam</p>
+  </div>
+  <div class="right">
+    <span>Rp 20.000</span>
+    <button onclick="beli('Internet 5 Jam',20000)">Beli</button>
+  </div>
+</div>
+
+<div class="card gaming">
+  <div>
+    <h4>Voucher Gaming</h4>
+    <p>Durasi 1 Jam</p>
+  </div>
+  <div class="right">
+    <span>Rp 6.000</span>
+    <button onclick="beli('Gaming 1 Jam',6000)">Beli</button>
+  </div>
+</div>
+
+<div class="card gaming">
+  <div>
+    <h4>Voucher Gaming</h4>
+    <p>Durasi 3 Jam</p>
+  </div>
+  <div class="right">
+    <span>Rp 15.000</span>
+    <button onclick="beli('Gaming 3 Jam',15000)">Beli</button>
+  </div>
+</div>
+</div>
+
+<div class="payment">
+💳 Pembayaran via <b>DANA</b><br>
+📸 Kirim bukti ke WhatsApp Admin
+</div>
+
+</div>
+
+<script>
+function beli(item,harga){
+  const danaLink="https://link.dana.id/qr";
+  const wa="https://wa.me/6281937016932?text=Halo Admin FIVENET 5,%0ASaya mau beli "+item+"%0AHarga: Rp "+harga.toLocaleString()+"%0ABukti transfer menyusul";
+  window.open(danaLink,"_blank");
+  setTimeout(()=>{window.open(wa,"_blank");},1000);
 }
+</script>
+
+</body>
+</html>
