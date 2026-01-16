@@ -52,7 +52,6 @@ body {
   background: linear-gradient(135deg, #43e97b, #38f9d7);
   z-index: -1;
   filter: blur(14px);
-  opacity: 0.8;
 }
 
 .logo-circle span {
@@ -68,7 +67,6 @@ body {
 
 /* RUNNING TEXT */
 .running-text {
-  width: 100%;
   overflow: hidden;
   margin-top: 6px;
 }
@@ -88,7 +86,7 @@ body {
 
 /* LOGIN */
 .login-box {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .login-box input {
@@ -110,7 +108,15 @@ body {
   cursor: pointer;
 }
 
-/* PRICE LIST */
+/* INFO BAYAR */
+.info-bayar {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* DAFTAR HARGA */
 .price-list h3 {
   text-align: center;
   margin-bottom: 15px;
@@ -122,23 +128,27 @@ body {
   padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 12px;
 }
 
-.price-card.internet {
-  border-left: 4px solid #4facfe;
-}
+.price-card.internet { border-left: 4px solid #4facfe; }
+.price-card.gaming { border-left: 4px solid #f093fb; }
 
-.price-card.gaming {
-  border-left: 4px solid #f093fb;
-}
+.price-card h4 { font-size: 15px; }
+.price-card p { font-size: 12px; opacity: 0.8; }
 
 .price-card .right {
   text-align: right;
 }
 
+.price-card .right span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
 .price-card button {
-  margin-top: 6px;
   padding: 6px 14px;
   border-radius: 10px;
   border: none;
