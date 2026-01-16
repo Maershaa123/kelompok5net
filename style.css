@@ -1,9 +1,11 @@
-/* Reset & Font */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+/* Reset & Font Keren */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 body{background:#fef6f0;color:#4e342e;padding:20px;line-height:1.5;}
 
 /* Container */
-.container{max-width:450px;width:95%;margin:auto;background:#fff8f0;border-radius:16px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,.15);}
+.container{max-width:480px;width:95%;margin:auto;background:#fff8f0;border-radius:16px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,.15);}
 
 /* Logo & Subtitle */
 .logo{width:120px;display:block;margin:auto;margin-bottom:10px;}
@@ -20,7 +22,7 @@ body{background:#fef6f0;color:#4e342e;padding:20px;line-height:1.5;}
 /* Tabs */
 .tabs{display:flex;gap:6px;margin:15px 0;}
 .tab{flex:1;padding:10px;border:none;border-radius:10px;background:#d7ccc8;color:#4e342e;font-weight:600;cursor:pointer;transition:.3s;font-size:14px;}
-.tab.active{background:#8d6e63;color:#fff;}
+.tab.active{background:#8d6e63;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.2);}
 
 /* Sections */
 .section{display:none;}
@@ -29,11 +31,11 @@ body{background:#fef6f0;color:#4e342e;padding:20px;line-height:1.5;}
 /* Card Inputs */
 .card{background:#fff3e0;padding:20px;border-radius:14px;margin-bottom:20px;box-shadow:0 3px 12px rgba(0,0,0,.08);}
 input{width:100%;padding:12px;border-radius:10px;border:1px solid #d7ccc8;background:#fffaf0;margin-bottom:12px;font-size:14px;}
-.btn{width:100%;padding:12px;border:none;border-radius:10px;font-weight:600;cursor:pointer;transition:.3s;font-size:14px;}
+.btn{width:100%;padding:12px;border:none;border-radius:10px;font-weight:600;cursor:pointer;transition:.3s;font-size:14px;box-shadow:0 3px 10px rgba(0,0,0,.1);}
 .btn-login{background:#8d6e63;color:#fff;}
-.btn-login:hover{background:#7b5e57;}
+.btn-login:hover{background:#7b5e57;transform:scale(1.03);}
 .btn-voucher{background:#a1887f;color:#fff;}
-.btn-voucher:hover{background:#8d6e63;}
+.btn-voucher:hover{background:#8d6e63;transform:scale(1.03);}
 
 /* Reset Link */
 .reset-link{text-align:center;margin-top:8px;font-size:13px;}
@@ -47,8 +49,19 @@ input{width:100%;padding:12px;border-radius:10px;border:1px solid #d7ccc8;backgr
 .voucher p{font-size:14px;margin-bottom:10px;color:#5d4037;}
 
 /* Payment Buttons */
-.pay a{display:inline-block;margin:4px 4px 0 0;padding:8px 14px;border-radius:8px;background:#6d4c41;color:#fff;text-decoration:none;font-size:13px;transition:.3s;}
-.pay a:hover{background:#5d4037;}
+.pay a{
+  display:inline-block;margin:4px 4px 0 0;padding:10px 16px;
+  border-radius:10px;font-size:13px;font-weight:600;text-decoration:none;color:#fff;
+  transition:.3s;box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+.pay a.dana{background:#004c91;}
+.pay a.dana:hover{background:#00376b;transform:scale(1.05);}
+.pay a.gopay{background:#00b14f;}
+.pay a.gopay:hover{background:#008a38;transform:scale(1.05);}
+.pay a.ovo{background:#9b30ff;}
+.pay a.ovo:hover{background:#7f26cc;transform:scale(1.05);}
+.pay a.qris{background:#ff8c00;}
+.pay a.qris:hover{background:#cc7000;transform:scale(1.05);}
 
 /* Confirmation Popup */
 .confirmation{display:none;background:#fff3e0;padding:12px;border:2px solid #d2b48c;border-radius:12px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
@@ -63,10 +76,10 @@ input{width:100%;padding:12px;border-radius:10px;border:1px solid #d7ccc8;backgr
 footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:15px;}
 
 /* Media Query Mobile */
-@media(max-width:450px){
+@media(max-width:480px){
   .container{padding:15px;}
   .logo{width:100px;}
   .tab{padding:8px;font-size:13px;}
   .btn{padding:10px;font-size:13px;}
-  .pay a{padding:6px 10px;font-size:12px;}
+  .pay a{padding:8px 12px;font-size:12px;}
 }
