@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FIVENET 5</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,55 +43,25 @@
 <!-- Daftar Voucher -->
 <div id="daftar" class="section">
 
-  <!-- Voucher Template -->
+  <!-- Voucher 12 Jam -->
   <div class="voucher">
     <h4>⏱️ Voucher 12 Jam</h4>
     <p>Harga : Rp 2.000</p>
     <div class="pay">
-      <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','DANA')">DANA</a>
-      <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','GoPay')">GoPay</a>
-      <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','OVO')">OVO</a>
-      <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','QRIS')">QRIS</a>
+      <a href="#" class="dana" onclick="payApp('dana')">DANA</a>
+      <a href="#" class="gopay" onclick="payApp('gopay')">GoPay</a>
+      <a href="#" class="ovo" onclick="payApp('ovo')">OVO</a>
+      <a href="#" class="qris" onclick="payApp('qris')">QRIS</a>
     </div>
     <div class="confirmation">
-      <a href="#" class="lanjut">Lanjut Bayar</a>
-      <div class="batal">Batal</div>
-    </div>
-  </div>
-
-  <div class="voucher">
-    <h4>📅 Voucher 2 Hari</h4>
-    <p>Harga : Rp 5.000</p>
-    <div class="pay">
-      <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','DANA')">DANA</a>
-      <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','GoPay')">GoPay</a>
-      <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','OVO')">OVO</a>
-      <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','QRIS')">QRIS</a>
-    </div>
-    <div class="confirmation">
-      <a href="#" class="lanjut">Lanjut Bayar</a>
-      <div class="batal">Batal</div>
-    </div>
-  </div>
-
-  <div class="voucher">
-    <h4>📅 Voucher 5 Hari</h4>
-    <p>Harga : Rp 10.000</p>
-    <div class="pay">
-      <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','DANA')">DANA</a>
-      <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','GoPay')">GoPay</a>
-      <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','OVO')">OVO</a>
-      <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','QRIS')">QRIS</a>
-    </div>
-    <div class="confirmation">
-      <a href="#" class="lanjut">Lanjut Bayar</a>
+      <a href="#" class="lanjut">Lanjut Bayar / Konfirmasi</a>
       <div class="batal">Batal</div>
     </div>
   </div>
 
 </div>
 
-<a class="wa" href="https://wa.me/6281937016932" target="_blank">💬 Hubungi Admin</a>
+<a class="wa" href="https://wa.me/6281937016932" target="_blank">💬 Hubungi CS / Admin</a>
 <footer>© 2026 FIVENET 5</footer>
 
 <script>
@@ -103,32 +72,32 @@ function openTab(event, tab){
   event.target.classList.add('active');
 }
 
-function showConfirm(el,paket,harga,metode){
-  let voucherDiv = el.closest('.voucher');
-  let confirmDiv = voucherDiv.querySelector('.confirmation');
-  confirmDiv.style.display = 'block';
-  let lanjut = confirmDiv.querySelector('.lanjut');
-  let batal = confirmDiv.querySelector('.batal');
+// Fungsi bayar langsung ke aplikasi
+function payApp(method){
+  let linkApp = '#';
+  switch(method){
+    case 'dana': linkApp='dana://home'; break;
+    case 'gopay': linkApp='gopay://'; break;
+    case 'ovo': linkApp='ovo://'; break;
+    case 'qris': linkApp='https://linkqris.com'; break; // QRIS bisa link web/scan
+  }
+  window.open(linkApp,'_blank');
+  // Tampilkan popup konfirmasi
+  let confirmation = document.querySelector('.confirmation');
+  confirmation.style.display='block';
 
-  lanjut.onclick = function(e){
+  let lanjut = confirmation.querySelector('.lanjut');
+  let batal = confirmation.querySelector('.batal');
+
+  lanjut.onclick=function(e){
     e.preventDefault();
-    let link;
-    switch(metode){
-      case 'DANA': link = 'dana://home'; break;
-      case 'GoPay': link = 'gopay://'; break;
-      case 'OVO': link = 'ovo://'; break;
-      case 'QRIS': link = 'https://linkqris.com'; break;
-      default: link='#';
-    }
-    // WA otomatis untuk konfirmasi pembayaran
     let pesan = encodeURIComponent(
-      `Halo Admin FIVENET 5,\nSaya sudah melakukan pembayaran.\nPaket: ${paket}\nHarga: ${harga}\nMetode: ${metode}\nMohon diproses. Terima kasih.`
+      `Halo Admin FIVENET 5,\nSaya sudah melakukan pembayaran melalui ${method.toUpperCase()}.\nMohon diproses. Terima kasih.`
     );
     window.open(`https://wa.me/6281937016932?text=${pesan}`,'_blank');
-    if(link!=='#'){window.open(link,'_blank');}
   }
 
-  batal.onclick = function(){confirmDiv.style.display='none';}
+  batal.onclick=function(){confirmation.style.display='none';}
 }
 </script>
 
