@@ -1,126 +1,160 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #e6f0ff, #f8fbff);
-    color: #1f2d3d;
+  margin: 0;
+  background: linear-gradient(135deg, #f4efe9, #e1e8f0);
+  color: #2e3a45;
 }
 
+/* BACKGROUND ORNAMEN */
+.background-pattern {
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+  opacity: 0.18;
+  z-index: -1;
+}
+
+/* CONTAINER */
 .container {
-    max-width: 420px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 }
 
+/* LOGO */
 .logo {
-    width: 180px;
-    margin: 20px auto;
-    display: block;
+  width: 200px;
+  margin: 25px auto 10px;
+  display: block;
 }
 
+/* JUDUL */
 h1 {
-    margin: 10px 0 5px;
+  margin: 5px 0;
+  color: #2d4059;
 }
 
-.subtitle {
-    color: #2e8cff;
-    font-size: 14px;
+/* RUNNING TEXT */
+.running-text {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px 0 20px;
 }
 
+.running-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: running 12s linear infinite;
+  color: #3c6e71;
+  font-weight: 500;
+}
+
+@keyframes running {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* CARD LOGIN */
 .card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    margin-top: 20px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .card input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border: 1px solid #dce3ec;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccd6e0;
 }
 
-.btn-group {
-    display: flex;
-    gap: 10px;
+/* BUTTON */
+.btn-row {
+  display: flex;
+  gap: 10px;
 }
 
-.btn-primary {
-    flex: 1;
-    padding: 12px;
-    background: #2e8cff;
-    color: white;
-    border: none;
-    border-radius: 8px;
+.btn-login {
+  flex: 1;
+  padding: 12px;
+  background: #2d4059;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
 }
 
-.btn-secondary {
-    flex: 1;
-    padding: 12px;
-    background: #e9eef5;
-    border: none;
-    border-radius: 8px;
+.btn-reset {
+  flex: 1;
+  padding: 12px;
+  background: #eaeaea;
+  border: none;
+  border-radius: 10px;
 }
 
+/* LINKS */
 .links {
-    margin-top: 10px;
-    font-size: 13px;
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 .links a {
-    text-decoration: none;
-    color: #2e8cff;
+  color: #3c6e71;
+  text-decoration: none;
 }
 
+/* VOUCHER */
 h2 {
-    margin-top: 30px;
+  margin: 30px 0 10px;
 }
 
 .voucher {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
-    margin: 10px 0;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 14px;
+  margin: 10px 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .voucher span {
-    color: #2e8cff;
-    font-weight: bold;
+  font-weight: bold;
+  color: #2d4059;
 }
 
+/* DANA */
 .btn-dana {
-    background: #00a3ff;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 13px;
+  background: #3bb4a2;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
 }
 
-.wa-float {
-    display: block;
-    margin: 25px auto;
-    background: #25d366;
-    color: white;
-    padding: 14px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+/* WA */
+.wa-button {
+  display: block;
+  margin: 25px auto;
+  background: #25d366;
+  color: #fff;
+  padding: 14px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+/* FOOTER */
 footer {
-    margin-top: 30px;
-    font-size: 12px;
-    color: #7a8ca5;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #6c757d;
 }
