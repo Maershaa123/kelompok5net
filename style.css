@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* ========================= RESET ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* ================= BODY ================= */
+/* ========================= BODY ========================= */
 body {
   min-height: 100vh;
   background: linear-gradient(135deg, #f6efe6, #e7d7c3);
@@ -16,7 +16,7 @@ body {
   padding: 20px;
 }
 
-/* ================= CONTAINER ================= */
+/* ========================= CONTAINER ========================= */
 .container {
   width: 100%;
   max-width: 420px;
@@ -26,14 +26,15 @@ body {
   box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
-/* ================= LOGO ================= */
+/* ========================= LOGO ========================= */
 .logo {
   display: block;
   width: 170px;
+  max-width: 100%;
   margin: 0 auto 10px;
 }
 
-/* ================= SUBTITLE ================= */
+/* ========================= SUBTITLE ========================= */
 .subtitle {
   text-align: center;
   font-size: 14px;
@@ -41,8 +42,9 @@ body {
   margin-bottom: 6px;
 }
 
-/* ================= RUNNING TEXT ================= */
+/* ========================= RUNNING TEXT ========================= */
 .running {
+  width: 100%;
   overflow: hidden;
   margin: 12px 0 24px;
 }
@@ -60,7 +62,7 @@ body {
   to { transform: translateX(-100%); }
 }
 
-/* ================= CARD ================= */
+/* ========================= CARD ========================= */
 .card {
   background: #ffffff;
   padding: 20px;
@@ -69,7 +71,7 @@ body {
   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-/* ================= INPUT ================= */
+/* ========================= INPUT ========================= */
 .card input {
   width: 100%;
   padding: 14px 16px;
@@ -78,20 +80,18 @@ body {
   border: 1px solid #e0cdb2;
   font-size: 14px;
   outline: none;
+  background: #fff;
 }
 
 .card input::placeholder {
   color: #b7a28a;
 }
 
-.card input:focus {
-  border-color: #8b6a44;
-}
-
-/* ================= BUTTON ================= */
+/* ========================= BUTTON ROW ========================= */
 .btn-row {
   display: flex;
   gap: 10px;
+  margin-top: 6px;
 }
 
 .btn-login {
@@ -116,7 +116,7 @@ body {
   cursor: pointer;
 }
 
-/* ================= LINKS ================= */
+/* ========================= LINKS ========================= */
 .links {
   text-align: center;
   margin-top: 14px;
@@ -129,7 +129,7 @@ body {
   font-weight: 500;
 }
 
-/* ================= TITLE ================= */
+/* ========================= TITLE ========================= */
 h2 {
   text-align: center;
   font-size: 20px;
@@ -137,7 +137,7 @@ h2 {
   margin: 16px 0;
 }
 
-/* ================= VOUCHER ================= */
+/* ========================= VOUCHER ========================= */
 .voucher {
   background: #ffffff;
   border-radius: 22px;
@@ -160,18 +160,25 @@ h2 {
   margin-top: 4px;
 }
 
-/* ================= DANA ================= */
+/* ========================= DANA BUTTON ========================= */
 .btn-dana {
-  background: #6b4f2d;
+  background: #00bfa5;
   color: #fff;
   padding: 10px 16px;
   border-radius: 14px;
+  text-decoration: none;
   font-size: 13px;
   font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
   cursor: pointer;
 }
 
-/* ================= DETAILS ================= */
+/* ========================= DETAILS ========================= */
+details {
+  width: auto;
+}
+
 summary {
   list-style: none;
   cursor: pointer;
@@ -181,7 +188,7 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-/* ================= CONFIRM ================= */
+/* ========================= CONFIRM BOX ========================= */
 .confirm {
   margin-top: 10px;
   display: flex;
@@ -190,7 +197,7 @@ summary::-webkit-details-marker {
 
 .lanjut {
   flex: 1;
-  background: #6b4f2d;
+  background: #00bfa5;
   color: #fff;
   padding: 9px;
   border-radius: 12px;
@@ -202,33 +209,67 @@ summary::-webkit-details-marker {
 
 .batal {
   flex: 1;
-  background: #d6c1a1;
-  color: #5b4327;
+  background: #ddd;
+  color: #333;
   padding: 9px;
   border-radius: 12px;
   text-align: center;
   font-size: 12px;
   cursor: pointer;
+  user-select: none;
 }
 
-/* ================= WHATSAPP ================= */
+/* ========================= WHATSAPP ========================= */
 .wa {
   display: block;
   width: 100%;
   text-align: center;
-  background: #6b4f2d;
+  background: #25D366;
   color: #fff;
   padding: 14px;
   border-radius: 20px;
   text-decoration: none;
   margin-top: 22px;
   font-weight: 600;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* ================= FOOTER ================= */
+/* ========================= FOOTER ========================= */
 footer {
   text-align: center;
   font-size: 12px;
   color: #8b6a44;
   margin-top: 20px;
+}
+
+/* ========================= RESPONSIVE ========================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 22px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* ========================= ANIMASI CONFIRM ========================= */
+details[open] .confirm {
+  animation: fade 0.2s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ========================= TOUCH HP ========================= */
+a,
+button,
+summary {
+  touch-action: manipulation;
 }
