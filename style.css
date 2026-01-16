@@ -1,12 +1,7 @@
-/* ========================= RESET ========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
 
-/* ========================= BODY ========================= */
+/* BODY */
 body {
   min-height: 100vh;
   background: linear-gradient(135deg, #f6efe6, #e7d7c3);
@@ -16,7 +11,7 @@ body {
   padding: 20px;
 }
 
-/* ========================= CONTAINER ========================= */
+/* CONTAINER */
 .container {
   width: 100%;
   max-width: 420px;
@@ -26,7 +21,7 @@ body {
   box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
-/* ========================= LOGO ========================= */
+/* LOGO */
 .logo {
   display: block;
   width: 170px;
@@ -34,7 +29,7 @@ body {
   margin: 0 auto 10px;
 }
 
-/* ========================= SUBTITLE ========================= */
+/* SUBTITLE */
 .subtitle {
   text-align: center;
   font-size: 14px;
@@ -42,13 +37,12 @@ body {
   margin-bottom: 6px;
 }
 
-/* ========================= RUNNING TEXT KECE ========================= */
+/* RUNNING TEXT */
 .running {
   width: 100%;
   overflow: hidden;
   margin: 12px 0 24px;
 }
-
 .running span {
   display: inline-block;
   white-space: nowrap;
@@ -57,13 +51,9 @@ body {
   font-weight: 600;
   animation: jalan 12s linear infinite;
 }
+@keyframes jalan { from{transform:translateX(100%);} to{transform:translateX(-100%);} }
 
-@keyframes jalan {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
-}
-
-/* ========================= CARD ========================= */
+/* CARD */
 .card {
   background: #ffffff;
   padding: 20px;
@@ -72,7 +62,7 @@ body {
   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-/* ========================= INPUT ========================= */
+/* INPUT */
 .card input {
   width: 100%;
   padding: 14px 16px;
@@ -83,194 +73,89 @@ body {
   outline: none;
   background: #fff;
 }
+.card input::placeholder { color: #b7a28a; }
 
-.card input::placeholder {
-  color: #b7a28a;
-}
-
-/* ========================= BUTTON ROW ========================= */
-.btn-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 6px;
-}
-
+/* BUTTON ROW */
+.btn-row { display:flex; gap:10px; margin-top:6px; }
 .btn-login {
-  flex: 1;
-  background: #6b4f2d;
-  color: #fff;
-  border: none;
-  padding: 14px;
-  border-radius: 14px;
-  font-weight: 600;
-  cursor: pointer;
+  flex:1; background:#6b4f2d; color:#fff; border:none;
+  padding:14px; border-radius:14px; font-weight:600; cursor:pointer;
 }
-
 .btn-reset {
-  flex: 1;
-  background: #d6c1a1;
-  color: #5b4327;
-  border: none;
-  padding: 14px;
-  border-radius: 14px;
-  font-weight: 600;
-  cursor: pointer;
+  flex:1; background:#d6c1a1; color:#5b4327; border:none;
+  padding:14px; border-radius:14px; font-weight:600; cursor:pointer;
 }
 
-/* ========================= LINKS ========================= */
-.links {
-  text-align: center;
-  margin-top: 14px;
-  font-size: 13px;
-}
+/* LINKS */
+.links { text-align:center; margin-top:14px; font-size:13px; }
+.links a { color:#6b4f2d; text-decoration:none; font-weight:500; }
 
-.links a {
-  color: #6b4f2d;
-  text-decoration: none;
-  font-weight: 500;
-}
+/* TITLE */
+h2 { text-align:center; font-size:20px; color:#6b4f2d; margin:16px 0; }
 
-/* ========================= TITLE ========================= */
-h2 {
-  text-align: center;
-  font-size: 20px;
-  color: #6b4f2d;
-  margin: 16px 0;
-}
-
-/* ========================= VOUCHER ========================= */
+/* VOUCHER CARD */
 .voucher {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 18px;
-  margin-bottom: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  background:#ffffff;
+  border-radius:22px;
+  padding:18px;
+  margin-bottom:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 12px 25px rgba(0,0,0,0.12);
 }
+.voucher strong { font-size:15px; color:#6b4f2d; }
+.voucher p { font-size:14px; color:#8b6a44; margin-top:4px; }
 
-.voucher strong {
-  font-size: 15px;
-  color: #6b4f2d;
-}
-
-.voucher p {
-  font-size: 14px;
-  color: #8b6a44;
-  margin-top: 4px;
-}
-
-/* ========================= DANA BUTTON ========================= */
+/* DANA BUTTON */
 .btn-dana {
-  background: #00bfa5;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-  text-align: center;
-  cursor: pointer;
+  background:#00bfa5;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  white-space:nowrap;
+  text-align:center;
+  cursor:pointer;
 }
 
-/* ========================= DETAILS ========================= */
-details {
-  width: auto;
-}
-
-summary {
-  list-style: none;
-  cursor: pointer;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* ========================= CONFIRM BOX ========================= */
+/* DETAILS CONFIRM */
+details { width:auto; }
+summary { list-style:none; cursor:pointer; }
+summary::-webkit-details-marker { display:none; }
 .confirm {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
+  margin-top:10px;
+  display:flex;
+  gap:8px;
 }
-
 .lanjut {
-  flex: 1;
-  background: #00bfa5;
-  color: #fff;
-  padding: 9px;
-  border-radius: 12px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 600;
+  flex:1; background:#00bfa5; color:#fff;
+  padding:9px; border-radius:12px; text-align:center;
+  text-decoration:none; font-size:12px; font-weight:600;
 }
-
 .batal {
-  flex: 1;
-  background: #ddd;
-  color: #333;
-  padding: 9px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 12px;
-  cursor: pointer;
-  user-select: none;
+  flex:1; background:#ddd; color:#333;
+  padding:9px; border-radius:12px; text-align:center;
+  font-size:12px; cursor:pointer; user-select:none;
 }
 
-/* ========================= WHATSAPP ========================= */
+/* WHATSAPP */
 .wa {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background: #25D366;
-  color: #fff;
-  padding: 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  margin-top: 22px;
-  font-weight: 600;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  display:block; width:100%; text-align:center;
+  background:#25D366; color:#fff; padding:14px;
+  border-radius:20px; text-decoration:none; margin-top:22px;
+  font-weight:600;
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* ========================= FOOTER ========================= */
-footer {
-  text-align: center;
-  font-size: 12px;
-  color: #8b6a44;
-  margin-top: 20px;
-}
+/* FOOTER */
+footer { text-align:center; font-size:12px; color:#8b6a44; margin-top:20px; }
 
-/* ========================= RESPONSIVE ========================= */
-@media (max-width: 480px) {
-  .container {
-    padding: 22px;
-  }
-
-  .logo {
-    width: 150px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-}
-
-/* ========================= ANIMASI CONFIRM ========================= */
-details[open] .confirm {
-  animation: fade 0.2s ease;
-}
-
-@keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ========================= TOUCH HP ========================= */
-a,
-button,
-summary {
-  touch-action: manipulation;
+/* RESPONSIVE */
+@media (max-width:480px){
+  .container{ padding:22px; }
+  .logo{ width:150px; }
+  h2{ font-size:18px; }
 }
