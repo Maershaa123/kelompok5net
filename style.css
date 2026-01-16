@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +28,7 @@ body {
 /* LOGO */
 .logo {
   display: block;
-  width: 150px;
+  width: 180px;
   margin: 0 auto 12px;
 }
 
@@ -56,7 +57,7 @@ h1 {
 
 @keyframes jalan {
   from { transform: translateX(100%); }
-  to   { transform: translateX(-100%); }
+  to { transform: translateX(-100%); }
 }
 
 /* CARD LOGIN */
