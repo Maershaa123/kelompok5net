@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Kelompok 5 Net</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -12,9 +12,9 @@
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="logo.png" alt="Logo Kelompok 5 Net">
+    <img src="logo.png" alt="Kelompok 5 Net">
     <h2>Kelompok 5 Net</h2>
-    <marquee>✨ Selamat Datang di Kelompok 5 Net • Warnet Modern • Cepat • Nyaman • Murah ✨</marquee>
+    <marquee>⚙️ Selamat Datang di Kelompok 5 Net • Warnet Teknik • Stabil • Cepat • Terpercaya ⚙️</marquee>
   </div>
 
   <!-- LOGIN -->
@@ -25,99 +25,77 @@
   </div>
 
   <!-- DAFTAR HARGA -->
-  <h3 class="judul">Daftar Harga Voucher</h3>
+  <div class="price-list">
+    <h3>Daftar Harga Voucher</h3>
 
-  <div class="price-card internet">
-    <div>
-      <h4>Voucher Internet</h4>
-      <p>Durasi 1 Jam</p>
+    <!-- ITEM -->
+    <div class="price-card">
+      <div>
+        <h4>Internet 1 Jam</h4>
+        <p>Voucher Reguler</p>
+      </div>
+      <div class="right">
+        <span>Rp 5.000</span>
+        <a class="buy" href="https://wa.me/6281937016932?text=Halo%20Admin,%20saya%20mau%20beli%20Voucher%20Internet%201%20Jam%20Rp5000.%20Bayar%20via%20DANA.">Beli</a>
+      </div>
     </div>
-    <div class="right">
-      <span>Rp 5.000</span>
-      <button onclick="beli('Voucher Internet 1 Jam',5000)">Beli</button>
+
+    <div class="price-card">
+      <div>
+        <h4>Internet 2 Jam</h4>
+        <p>Voucher Reguler</p>
+      </div>
+      <div class="right">
+        <span>Rp 9.000</span>
+        <a class="buy" href="https://wa.me/6281937016932?text=Halo%20Admin,%20saya%20mau%20beli%20Voucher%20Internet%202%20Jam%20Rp9000.%20Bayar%20via%20DANA.">Beli</a>
+      </div>
     </div>
+
+    <div class="price-card">
+      <div>
+        <h4>Internet 5 Jam</h4>
+        <p>Voucher Hemat</p>
+      </div>
+      <div class="right">
+        <span>Rp 20.000</span>
+        <a class="buy" href="https://wa.me/6281937016932?text=Halo%20Admin,%20saya%20mau%20beli%20Voucher%20Internet%205%20Jam%20Rp20000.%20Bayar%20via%20DANA.">Beli</a>
+      </div>
+    </div>
+
+    <div class="price-card gaming">
+      <div>
+        <h4>Gaming 1 Jam</h4>
+        <p>High Performance</p>
+      </div>
+      <div class="right">
+        <span>Rp 6.000</span>
+        <a class="buy" href="https://wa.me/6281937016932?text=Halo%20Admin,%20saya%20mau%20beli%20Voucher%20Gaming%201%20Jam%20Rp6000.%20Bayar%20via%20OVO.">Beli</a>
+      </div>
+    </div>
+
+    <div class="price-card gaming">
+      <div>
+        <h4>Gaming 3 Jam</h4>
+        <p>Paket Gamer</p>
+      </div>
+      <div class="right">
+        <span>Rp 15.000</span>
+        <a class="buy" href="https://wa.me/6281937016932?text=Halo%20Admin,%20saya%20mau%20beli%20Voucher%20Gaming%203%20Jam%20Rp15000.%20Bayar%20via%20OVO.">Beli</a>
+      </div>
+    </div>
+
   </div>
 
-  <div class="price-card internet">
-    <div>
-      <h4>Voucher Internet</h4>
-      <p>Durasi 2 Jam</p>
-    </div>
-    <div class="right">
-      <span>Rp 9.000</span>
-      <button onclick="beli('Voucher Internet 2 Jam',9000)">Beli</button>
-    </div>
-  </div>
-
-  <div class="price-card internet">
-    <div>
-      <h4>Voucher Internet</h4>
-      <p>Durasi 5 Jam</p>
-    </div>
-    <div class="right">
-      <span>Rp 20.000</span>
-      <button onclick="beli('Voucher Internet 5 Jam',20000)">Beli</button>
-    </div>
-  </div>
-
-  <div class="price-card gaming">
-    <div>
-      <h4>Voucher Gaming</h4>
-      <p>Durasi 1 Jam</p>
-    </div>
-    <div class="right">
-      <span>Rp 6.000</span>
-      <button onclick="beli('Voucher Gaming 1 Jam',6000)">Beli</button>
-    </div>
-  </div>
-
-  <div class="price-card gaming">
-    <div>
-      <h4>Voucher Gaming</h4>
-      <p>Durasi 3 Jam</p>
-    </div>
-    <div class="right">
-      <span>Rp 15.000</span>
-      <button onclick="beli('Voucher Gaming 3 Jam',15000)">Beli</button>
-    </div>
+  <!-- PAYMENT -->
+  <div class="payment">
+    <p>Metode Pembayaran</p>
+    <span>DANA</span>
+    <span>OVO</span>
+    <span>Transfer</span>
+    <p class="note">Setelah bayar, kirim bukti ke WhatsApp Admin</p>
   </div>
 
 </div>
-
-<!-- SCRIPT PEMBAYARAN -->
-<script>
-function beli(item, harga) {
-  const nomorWA = "6281937016932";
-  const nomorDana = "081937016932";
-
-  alert(
-    "Bayar via DANA\n\n" +
-    "Nomor DANA: " + nomorDana + "\n" +
-    "Nominal: Rp " + harga.toLocaleString() + "\n\n" +
-    "Setelah bayar:\nScreenshot bukti ➜ kirim ke WhatsApp Admin"
-  );
-
-  const pesan = 
-`Halo Admin Kelompok 5 Net 👋
-
-Saya sudah melakukan pembayaran via DANA.
-
-Detail:
-${item}
-Nominal: Rp ${harga.toLocaleString()}
-
-Nomor DANA Tujuan:
-${nomorDana}
-
-Saya akan kirim bukti transfer (SS).
-Terima kasih 🙏`;
-
-  window.open(
-    "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan),
-    "_blank"
-  );
-}
-</script>
 
 </body>
 </html>
