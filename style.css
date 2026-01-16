@@ -1,150 +1,84 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIVENET 5 - Coklat Cream</title>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-  <meta http-equiv="Pragma" content="no-cache"/>
-  <meta http-equiv="Expires" content="0"/>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#fdf6e3;color:#4e342e;padding:20px}
+.container{max-width:420px;width:95%;margin:auto;background:#fff8f0;border-radius:14px;padding:20px;box-shadow:0 8px 25px rgba(0,0,0,.15)}
 
-  <style>
-    /* ===== Reset ===== */
-    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-    body {background:#fdf6e3; color:#4e342e; display:flex; justify-content:center; padding:20px;}
-    .container {max-width:400px; width:100%; background:#fff8f0; border-radius:12px; padding:20px; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
-    
-    img.logo {width:120px; display:block; margin:0 auto 10px;}
-    .subtitle {text-align:center; color:#6d4c41; margin-bottom:15px; font-weight:500;}
-    
-    /* Running text */
-    .running {background:#fff3e0; color:#5d4037; padding:5px 10px; border-radius:8px; margin-bottom:15px; font-size:14px; white-space:nowrap; overflow:hidden;}
-    .running span {display:inline-block; animation:scroll 12s linear infinite;}
-    @keyframes scroll {0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.logo{width:120px;display:block;margin:auto}
+.subtitle{text-align:center;color:#6d4c41;margin:6px 0;font-weight:600;font-size:14px}
 
-    /* Card / Box */
-    .card {background:#fff3e0; padding:15px; border-radius:10px; margin-bottom:15px; box-shadow:0 2px 5px rgba(0,0,0,0.05);}
-    .card input {width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #d7ccc8; background:#fffaf0; color:#4e342e;}
-    .btn-row {display:flex; gap:10px;}
-    .btn-login, .btn-reset, .btn-voucher, .btn-pay {flex:1; padding:10px; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:0.2s;}
-    .btn-login {background:#8d6e63; color:#fff;}
-    .btn-login:hover {background:#7b5e57;}
-    .btn-reset {background:#d7ccc8; color:#4e342e;}
-    .btn-reset:hover {background:#c2b09d;}
-    .btn-voucher {background:#a1887f; color:#fff; margin-bottom:10px;}
-    .btn-voucher:hover {background:#8d6e63;}
-    .btn-pay {background:#6d4c41; color:#fff; margin-top:5px;}
-    .btn-pay:hover {background:#5d4037;}
-    .links {text-align:center; font-size:13px; margin-top:8px;}
-    .links a {text-decoration:none; color:#6d4c41; margin:0 5px;}
-    .links a:hover {text-decoration:underline;}
+/* RUNNING TEXT */
+.running-text{
+  background:#d7ccc8;
+  color:#4e342e;
+  border-radius:10px;
+  overflow:hidden;
+  white-space:nowrap;
+  box-shadow:0 2px 5px rgba(0,0,0,.1);
+  margin:10px 0;
+  padding:6px 10px;
+  font-weight:500;
+}
+.running-text span{
+  display:inline-block;
+  padding-left:100%;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee{
+  0%{transform:translateX(100%);}
+  100%{transform:translateX(-100%);}
+}
 
-    /* Voucher Section */
-    .voucher-list {margin-bottom:15px;}
-    .voucher {display:flex; justify-content:space-between; align-items:center; background:#f5f5dc; padding:10px; border-radius:8px; margin-bottom:10px; cursor:pointer; transition:0.2s; border:1px solid #d2b48c;}
-    .voucher:hover {background:#f0e6d2;}
-    .voucher div {display:flex; flex-direction:column;}
-    details summary {cursor:pointer; list-style:none; color:#4e342e; font-weight:600;}
-    details[open] .confirm {display:block;}
-    .confirm {display:none; margin-top:5px;}
-    .confirm a, .confirm .batal {display:inline-block; padding:5px 10px; border-radius:6px; margin-right:5px; font-size:13px;}
-    .confirm a {background:#8d6e63; color:#fff; text-decoration:none;}
-    .confirm a:hover {background:#7b5e57;}
-    .confirm .batal {background:#d7ccc8; cursor:pointer;}
-    .confirm .batal:hover {background:#c2b09d;}
+/* TABS */
+.tabs{display:flex;gap:6px;margin:15px 0}
+.tab{flex:1;padding:10px;border:none;border-radius:8px;background:#d7ccc8;font-weight:600;color:#4e342e;cursor:pointer;transition:.2s}
+.tab.active{background:#8d6e63;color:#fff}
 
-    /* WA Confirmation */
-    .wa {display:block; text-align:center; background:#6d4c41; color:#fff; padding:10px; border-radius:10px; text-decoration:none; font-weight:600; margin-bottom:15px;}
-    .wa:hover {background:#5d4037;}
+/* SECTIONS */
+.section{display:none}
+.section.active{display:block}
 
-    footer {text-align:center; font-size:12px; color:#8d6e63;}
-  </style>
-</head>
-<body>
-<div class="container">
+/* CARD INPUT */
+.card{background:#fff3e0;padding:15px;border-radius:12px;margin-bottom:15px;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid #d7ccc8;background:#fffaf0;margin-bottom:10px}
+.btn{width:100%;padding:12px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:.2s}
+.btn-login{background:#8d6e63;color:#fff}
+.btn-login:hover{background:#7b5e57}
+.btn-voucher{background:#a1887f;color:#fff}
+.btn-voucher:hover{background:#8d6e63}
+.links{text-align:center;font-size:13px;margin-top:8px}
+.links a{text-decoration:none;color:#6d4c41;margin:0 5px}
+.links a:hover{text-decoration:underline}
 
-  <img src="logo.png" class="logo" alt="Logo FIVENET 5">
-  <div class="subtitle">Teknik Komputer • Kelompok 5</div>
+/* VOUCHER LIST */
+.voucher{background:#f5f5dc;border:2px solid #d2b48c;border-radius:12px;padding:12px;margin-bottom:12px;transition:.2s;position:relative}
+.voucher:hover{background:#f0e6d2;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+.voucher h4{margin-bottom:6px;color:#4e342e;font-weight:600}
+.voucher p{font-size:14px;margin-bottom:8px;color:#5d4037}
 
-  <div class="running">
-    <span>🚀 Surf, Chat, Game, TikTokan Semua Lancar • FIVENET 5 Jadi Spot Hits Kamu 😎📱✨</span>
-  </div>
+/* PAYMENT BUTTON */
+.pay a{display:inline-block;margin:4px 4px 0 0;padding:6px 12px;border-radius:6px;background:#6d4c41;color:#fff;text-decoration:none;font-size:13px;transition:.2s}
+.pay a:hover{background:#5d4037}
 
-  <!-- LOGIN -->
-  <div class="card">
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
-    <div class="btn-row">
-      <button class="btn-login">Login</button>
-      <button class="btn-reset">Reset</button>
-    </div>
-    <div class="links">
-      <a href="#">Lupa Password</a> | 
-      <a href="https://wa.me/6281937016932" target="_blank">Hubungi CS</a>
-    </div>
-  </div>
+/* KONFIRMASI POPUP */
+.confirmation{display:none;background:#fff3e0;padding:12px;border:2px solid #d2b48c;border-radius:10px;margin-top:8px}
+.confirmation a{display:inline-block;margin-right:8px;padding:6px 10px;border-radius:6px;background:#8d6e63;color:#fff;text-decoration:none;font-size:13px}
+.confirmation .batal{display:inline-block;margin-right:8px;padding:6px 10px;border-radius:6px;background:#a1887f;color:#fff;font-size:13px;cursor:pointer}
 
-  <!-- VOUCHER -->
-  <button class="btn-voucher" onclick="toggleVouchers()">Pilih Voucher</button>
-  <div class="voucher-list" id="voucherList" style="display:none;">
-    <div class="voucher">
-      <div>
-        <strong>12 Jam</strong>
-        <p>Rp 2.000</p>
-      </div>
-      <details>
-        <summary>Bayar</summary>
-        <div class="confirm">
-          <a href="https://link.dana.id/qr/081937016932" target="_blank">DANA</a>
-          <a href="https://link.ovo.id/qr/081937016932" target="_blank">OVO</a>
-          <a href="https://link.gopay.id/qr/081937016932" target="_blank">GoPay</a>
-          <a href="https://link.qris.id/qr/081937016932" target="_blank">QRIS</a>
-          <div class="batal">Batal</div>
-        </div>
-      </details>
-    </div>
+/* WA BUTTON */
+.wa{display:block;margin-top:12px;text-align:center;background:#5d4037;color:#fff;padding:12px;border-radius:10px;font-weight:600;text-decoration:none;transition:.2s}
+.wa:hover{background:#4e342e}
 
-    <div class="voucher">
-      <div>
-        <strong>2 Hari</strong>
-        <p>Rp 5.000</p>
-      </div>
-      <details>
-        <summary>Bayar</summary>
-        <div class="confirm">
-          <a href="#">DANA</a>
-          <a href="#">OVO</a>
-          <a href="#">GoPay</a>
-          <a href="#">QRIS</a>
-          <div class="batal">Batal</div>
-        </div>
-      </details>
-    </div>
-  </div>
+/* FOOTER */
+footer{text-align:center;font-size:12px;color:#8d6e63;margin-top:12px}
 
-  <a class="wa" href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%0ASaya%20sudah%20melakukan%20pembayaran.%0ABerikut%20saya%20lampirkan%20bukti%20pembayaran." target="_blank">
-    💬 Konfirmasi Pembayaran via WhatsApp
-  </a>
+/* RESET & FORGOT PASSWORD */
+.reset-link{display:block;text-align:center;margin-top:8px;font-size:13px}
+.reset-link a{color:#6d4c41;text-decoration:none;font-weight:500}
+.reset-link a:hover{text-decoration:underline}
 
-  <footer>© 2026 FIVENET 5 • All Rights Reserved</footer>
-
-</div>
-
-<script>
-  function toggleVouchers(){
-    const list = document.getElementById('voucherList');
-    list.style.display = list.style.display === 'none' ? 'block' : 'none';
-  }
-
-  // Tombol Batal
-  document.querySelectorAll('.batal').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      this.closest('details').removeAttribute('open');
-    });
-  });
-</script>
-</body>
-</html>
+/* MEDIA QUERY MOBILE */
+@media(max-width:420px){
+  .container{padding:15px;}
+  .logo{width:100px;}
+  .tab{padding:8px;font-size:13px;}
+  .btn{padding:10px;}
+}
