@@ -7,20 +7,19 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #020617, #020617);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #e5e7eb;
 }
 
 .container {
   width: 380px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
+  background: #020617;
   border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.6);
 }
 
 /* LOGO */
@@ -32,34 +31,35 @@ body {
 .logo-circle {
   width: 80px;
   height: 80px;
-  margin: auto;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  margin: 0 auto;
 }
 
 .logo-circle span {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 700;
+  color: #020617;
 }
 
-.logo h2 {
+.logo h1 {
   margin-top: 12px;
   font-size: 22px;
 }
 
+/* RUNNING TEXT */
 .running-text {
-  overflow: hidden;
   margin-top: 6px;
+  overflow: hidden;
 }
 
 .running-text span {
-  display: inline-block;
   white-space: nowrap;
-  font-size: 13px;
+  font-size: 12px;
+  color: #94a3b8;
   animation: jalan 10s linear infinite;
 }
 
@@ -69,10 +69,14 @@ body {
 }
 
 /* LOGIN */
+.login-box {
+  margin-bottom: 25px;
+}
+
 .login-box input {
   width: 100%;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
   margin-bottom: 10px;
 }
@@ -80,48 +84,61 @@ body {
 .login-box button {
   width: 100%;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: none;
-  background: #00c6ff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
+  background: #0ea5e9;
+  color: #020617;
+  font-weight: 700;
 }
 
-/* PRICE */
-.price-list h3 {
+/* PRICE LIST */
+.price-list h2 {
   text-align: center;
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 
 .price-card {
-  background: rgba(255,255,255,0.12);
-  border-radius: 14px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
   padding: 14px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.price-card.internet {
-  border-left: 4px solid #00c6ff;
+.price-card.internet { border-left: 4px solid #38bdf8; }
+.price-card.gaming { border-left: 4px solid #22c55e; }
+
+.info h3 { font-size: 14px; }
+.info p { font-size: 12px; color: #94a3b8; }
+
+.action {
+  text-align: right;
 }
 
-.price-card.gaming {
-  border-left: 4px solid #f093fb;
-}
-
-.price-card .right span {
-  font-weight: bold;
+.action span {
   display: block;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
-.price-card button {
-  padding: 6px 12px;
-  border-radius: 10px;
-  border: none;
-  background: #22c55e;
+.btn {
+  display: block;
+  text-decoration: none;
   font-size: 12px;
-  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.btn.dana {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn.wa {
+  background: #22c55e;
+  color: #020617;
 }
