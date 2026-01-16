@@ -54,14 +54,64 @@
       <a href="#" class="qris" onclick="payApp('qris')">QRIS</a>
     </div>
     <div class="confirmation">
-      <a href="#" class="lanjut">Lanjut Bayar / Konfirmasi</a>
+      <a href="#" class="lanjut">Konfirmasi Pembayaran / Kirim Bukti</a>
+      <div class="batal">Batal</div>
+    </div>
+  </div>
+
+  <!-- Voucher 2 Hari -->
+  <div class="voucher">
+    <h4>📅 Voucher 2 Hari</h4>
+    <p>Harga : Rp 5.000</p>
+    <div class="pay">
+      <a href="#" class="dana" onclick="payApp('dana')">DANA</a>
+      <a href="#" class="gopay" onclick="payApp('gopay')">GoPay</a>
+      <a href="#" class="ovo" onclick="payApp('ovo')">OVO</a>
+      <a href="#" class="qris" onclick="payApp('qris')">QRIS</a>
+    </div>
+    <div class="confirmation">
+      <a href="#" class="lanjut">Konfirmasi Pembayaran / Kirim Bukti</a>
+      <div class="batal">Batal</div>
+    </div>
+  </div>
+
+  <!-- Voucher 5 Hari -->
+  <div class="voucher">
+    <h4>📅 Voucher 5 Hari</h4>
+    <p>Harga : Rp 10.000</p>
+    <div class="pay">
+      <a href="#" class="dana" onclick="payApp('dana')">DANA</a>
+      <a href="#" class="gopay" onclick="payApp('gopay')">GoPay</a>
+      <a href="#" class="ovo" onclick="payApp('ovo')">OVO</a>
+      <a href="#" class="qris" onclick="payApp('qris')">QRIS</a>
+    </div>
+    <div class="confirmation">
+      <a href="#" class="lanjut">Konfirmasi Pembayaran / Kirim Bukti</a>
+      <div class="batal">Batal</div>
+    </div>
+  </div>
+
+  <!-- Voucher 7 Hari -->
+  <div class="voucher">
+    <h4>📅 Voucher 7 Hari</h4>
+    <p>Harga : Rp 15.000</p>
+    <div class="pay">
+      <a href="#" class="dana" onclick="payApp('dana')">DANA</a>
+      <a href="#" class="gopay" onclick="payApp('gopay')">GoPay</a>
+      <a href="#" class="ovo" onclick="payApp('ovo')">OVO</a>
+      <a href="#" class="qris" onclick="payApp('qris')">QRIS</a>
+    </div>
+    <div class="confirmation">
+      <a href="#" class="lanjut">Konfirmasi Pembayaran / Kirim Bukti</a>
       <div class="batal">Batal</div>
     </div>
   </div>
 
 </div>
 
-<a class="wa" href="https://wa.me/6281937016932" target="_blank">💬 Hubungi CS / Admin</a>
+<!-- Hubungi CS -->
+<a class="wa" href="#" id="hubungiCS">💬 Hubungi CS / Admin</a>
+
 <footer>© 2026 FIVENET 5</footer>
 
 <script>
@@ -72,18 +122,20 @@ function openTab(event, tab){
   event.target.classList.add('active');
 }
 
-// Fungsi bayar langsung ke aplikasi
+// Fungsi bayar / open app / konfirmasi
 function payApp(method){
-  let linkApp = '#';
+  let linkApp='#';
   switch(method){
     case 'dana': linkApp='dana://home'; break;
     case 'gopay': linkApp='gopay://'; break;
     case 'ovo': linkApp='ovo://'; break;
-    case 'qris': linkApp='https://linkqris.com'; break; // QRIS bisa link web/scan
+    case 'qris': linkApp='https://linkqris.com'; break;
   }
+  // Buka aplikasi / QRIS
   window.open(linkApp,'_blank');
+
   // Tampilkan popup konfirmasi
-  let confirmation = document.querySelector('.confirmation');
+  let confirmation = event.target.closest('.voucher').querySelector('.confirmation');
   confirmation.style.display='block';
 
   let lanjut = confirmation.querySelector('.lanjut');
@@ -91,13 +143,22 @@ function payApp(method){
 
   lanjut.onclick=function(e){
     e.preventDefault();
-    let pesan = encodeURIComponent(
-      `Halo Admin FIVENET 5,\nSaya sudah melakukan pembayaran melalui ${method.toUpperCase()}.\nMohon diproses. Terima kasih.`
+    let pesan=encodeURIComponent(
+      `Halo Admin FIVENET 5,\nSaya sudah melakukan pembayaran melalui ${method.toUpperCase()}.\nBerikut bukti pembayaran saya.\nMohon diproses. Terima kasih.`
     );
     window.open(`https://wa.me/6281937016932?text=${pesan}`,'_blank');
   }
 
   batal.onclick=function(){confirmation.style.display='none';}
+}
+
+// WA CS dengan pesan default
+document.getElementById('hubungiCS').onclick = function(e){
+  e.preventDefault();
+  let pesanCS = encodeURIComponent(
+    "Halo CS FIVENET 5,\nSaya ingin bertanya / butuh bantuan terkait voucher."
+  );
+  window.open(`https://wa.me/6281937016932?text=${pesanCS}`,'_blank');
 }
 </script>
 
