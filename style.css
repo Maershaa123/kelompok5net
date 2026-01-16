@@ -2,80 +2,135 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg,#667eea,#764ba2);
+  background: radial-gradient(circle at top, #0f2027, #203a43, #000);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #e0e0e0;
 }
 
 .container {
   width: 380px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
+  background: rgba(0,0,0,0.65);
+  border-radius: 18px;
   padding: 25px;
+  box-shadow: 0 0 30px rgba(0,255,255,0.15);
 }
 
+/* LOGO */
 .logo {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .logo img {
-  width: 90px;
+  width: 80px;
   margin-bottom: 10px;
 }
 
 .logo h2 {
-  font-size: 22px;
+  font-weight: 600;
 }
 
+.logo marquee {
+  font-size: 12px;
+  color: #00e5ff;
+}
+
+/* LOGIN */
 .login-box input {
   width: 100%;
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 10px;
   border: none;
+  outline: none;
 }
 
 .login-box button {
   width: 100%;
   padding: 12px;
-  border-radius: 12px;
   border: none;
-  background: #ffecd2;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00e5ff, #00bcd4);
+  color: #000;
   font-weight: bold;
   cursor: pointer;
 }
 
-.judul {
+/* PRICE */
+.price-list h3 {
   text-align: center;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .price-card {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  border-left: 4px solid #00e5ff;
   border-radius: 14px;
   padding: 12px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  align-items: center;
 }
 
-.price-card.internet { border-left: 4px solid #4facfe; }
-.price-card.gaming { border-left: 4px solid #f093fb; }
+.price-card.gaming {
+  border-left-color: #ff5252;
+}
 
-.price-card button {
-  padding: 6px 14px;
-  border-radius: 8px;
-  border: none;
-  background: #43e97b;
+.price-card h4 {
+  font-size: 14px;
+}
+
+.price-card p {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.right {
+  text-align: right;
+}
+
+.right span {
   font-weight: bold;
-  cursor: pointer;
+  display: block;
+}
+
+.buy {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 6px 14px;
+  background: #00e676;
+  color: #000;
+  border-radius: 8px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* PAYMENT */
+.payment {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.payment span {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #111;
+  border: 1px solid #00e5ff;
+  font-size: 12px;
+}
+
+.note {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 5px;
 }
