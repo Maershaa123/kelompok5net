@@ -1,15 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIVENET 5</title>
+
+  <!-- Cache HP -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+
+  <link rel="stylesheet" href="style.css?v=FINAL">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
 <div class="container">
 
-  <img src="logo.png" alt="FIVENET 5" class="logo">
+  <img src="logo.png" class="logo" alt="Logo FIVENET 5">
 
   <div class="subtitle">Teknik Komputer • Kelompok 5</div>
 
-  <!-- RUNNING TEXT KECE -->
+  <!-- Running text -->
   <div class="running">
     <span>🚀 Surf, Chat, Game, TikTokan Semua Lancar • FIVENET 5 Jadi Spot Hits Kamu 😎📱✨</span>
   </div>
 
-  <!-- LOGIN -->
+  <!-- Login -->
   <div class="card">
     <input type="text" placeholder="Username">
     <input type="password" placeholder="Password">
@@ -21,14 +38,11 @@
 
     <div class="links">
       <a href="#">Lupa Password</a> |
-      <a href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%0ASaya%20mengalami%20kendala%20login.%0ABerikut%20saya%20lampirkan%20screenshot%20kendala%20saya."
-         target="_blank">
-        Hubungi CS
-      </a>
+      <a href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%0ASaya%20mengalami%20kendala%20login.%0ABerikut%20saya%20lampirkan%20screenshot%20kendala%20saya." target="_blank">Hubungi CS</a>
     </div>
   </div>
 
-  <!-- INPUT VOUCHER -->
+  <!-- Input Voucher -->
   <div class="card">
     <input type="text" placeholder="Masukkan Kode Voucher">
     <button class="btn-login">Gunakan Voucher</button>
@@ -36,7 +50,7 @@
 
   <h2>Paket Voucher</h2>
 
-  <!-- 12 JAM -->
+  <!-- Voucher 12 Jam -->
   <div class="voucher">
     <div>
       <strong>12 Jam</strong>
@@ -51,7 +65,7 @@
     </details>
   </div>
 
-  <!-- 2 HARI -->
+  <!-- Voucher 2 Hari -->
   <div class="voucher">
     <div>
       <strong>2 Hari</strong>
@@ -66,7 +80,7 @@
     </details>
   </div>
 
-  <!-- 5 HARI -->
+  <!-- Voucher 5 Hari -->
   <div class="voucher">
     <div>
       <strong>5 Hari</strong>
@@ -81,7 +95,7 @@
     </details>
   </div>
 
-  <!-- 7 HARI -->
+  <!-- Voucher 7 Hari -->
   <div class="voucher">
     <div>
       <strong>7 Hari</strong>
@@ -96,10 +110,8 @@
     </details>
   </div>
 
-  <!-- KONFIRMASI -->
-  <a class="wa"
-     href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%0ASaya%20sudah%20melakukan%20pembayaran%20via%20DANA.%0ABerikut%20saya%20lampirkan%20screenshot%20bukti%20pembayaran."
-     target="_blank">
+  <!-- Konfirmasi WhatsApp -->
+  <a class="wa" href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%0ASaya%20sudah%20melakukan%20pembayaran%20via%20DANA.%0ABerikut%20saya%20lampirkan%20screenshot%20bukti%20pembayaran." target="_blank">
     💬 Konfirmasi Pembayaran via WhatsApp
   </a>
 
@@ -108,9 +120,13 @@
 </div>
 
 <script>
+  // Tombol Batal
   document.querySelectorAll('.batal').forEach(function(btn){
     btn.addEventListener('click', function(){
       this.closest('details').removeAttribute('open');
     });
   });
 </script>
+
+</body>
+</html>
