@@ -21,18 +21,19 @@
   <button class="tab" onclick="openTab(event,'daftar')">Daftar Voucher</button>
 </div>
 
+<!-- Member Login -->
 <div id="member" class="section active">
   <div class="card">
     <input type="text" placeholder="Username">
     <input type="password" placeholder="Password">
     <button class="btn btn-login">Login Member</button>
     <div class="reset-link">
-      <a href="#">Lupa Password?</a> | 
-      <a href="#">Reset Akun</a>
+      <a href="#">Lupa Password?</a> | <a href="#">Reset Akun</a>
     </div>
   </div>
 </div>
 
+<!-- Input Voucher -->
 <div id="voucher" class="section">
   <div class="card">
     <input type="text" placeholder="Masukkan Kode Voucher">
@@ -40,14 +41,17 @@
   </div>
 </div>
 
+<!-- Daftar Voucher -->
 <div id="daftar" class="section">
+
+  <!-- Voucher Template -->
   <div class="voucher">
     <h4>⏱️ Voucher 12 Jam</h4>
     <p>Harga : Rp 2.000</p>
     <div class="pay">
       <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','DANA')">DANA</a>
-      <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','OVO')">OVO</a>
       <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','GoPay')">GoPay</a>
+      <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','OVO')">OVO</a>
       <a href="#" onclick="showConfirm(this,'12 Jam','Rp 2.000','QRIS')">QRIS</a>
     </div>
     <div class="confirmation">
@@ -55,13 +59,14 @@
       <div class="batal">Batal</div>
     </div>
   </div>
+
   <div class="voucher">
     <h4>📅 Voucher 2 Hari</h4>
     <p>Harga : Rp 5.000</p>
     <div class="pay">
       <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','DANA')">DANA</a>
-      <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','OVO')">OVO</a>
       <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','GoPay')">GoPay</a>
+      <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','OVO')">OVO</a>
       <a href="#" onclick="showConfirm(this,'2 Hari','Rp 5.000','QRIS')">QRIS</a>
     </div>
     <div class="confirmation">
@@ -69,13 +74,14 @@
       <div class="batal">Batal</div>
     </div>
   </div>
+
   <div class="voucher">
     <h4>📅 Voucher 5 Hari</h4>
     <p>Harga : Rp 10.000</p>
     <div class="pay">
       <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','DANA')">DANA</a>
-      <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','OVO')">OVO</a>
       <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','GoPay')">GoPay</a>
+      <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','OVO')">OVO</a>
       <a href="#" onclick="showConfirm(this,'5 Hari','Rp 10.000','QRIS')">QRIS</a>
     </div>
     <div class="confirmation">
@@ -83,6 +89,7 @@
       <div class="batal">Batal</div>
     </div>
   </div>
+
 </div>
 
 <a class="wa" href="https://wa.me/6281937016932" target="_blank">💬 Hubungi Admin</a>
@@ -105,19 +112,23 @@ function showConfirm(el,paket,harga,metode){
 
   lanjut.onclick = function(e){
     e.preventDefault();
-    let pesan =
-      `Halo Admin FIVENET 5,%0A`+
-      `Saya sudah melakukan pembayaran.%0A`+
-      `Paket : ${paket}%0A`+
-      `Harga : ${harga}%0A`+
-      `Metode : ${metode}%0A`+
-      `Mohon diproses. Terima kasih.`;
+    let link;
+    switch(metode){
+      case 'DANA': link = 'dana://home'; break;
+      case 'GoPay': link = 'gopay://'; break;
+      case 'OVO': link = 'ovo://'; break;
+      case 'QRIS': link = 'https://linkqris.com'; break;
+      default: link='#';
+    }
+    // WA otomatis untuk konfirmasi pembayaran
+    let pesan = encodeURIComponent(
+      `Halo Admin FIVENET 5,\nSaya sudah melakukan pembayaran.\nPaket: ${paket}\nHarga: ${harga}\nMetode: ${metode}\nMohon diproses. Terima kasih.`
+    );
     window.open(`https://wa.me/6281937016932?text=${pesan}`,'_blank');
+    if(link!=='#'){window.open(link,'_blank');}
   }
 
-  batal.onclick = function(){
-    confirmDiv.style.display='none';
-  }
+  batal.onclick = function(){confirmDiv.style.display='none';}
 }
 </script>
 
