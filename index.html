@@ -1,131 +1,145 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FIVENET 5</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIVENET 5</title>
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+  <!-- Anti cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-<style>
-*{box-sizing:border-box;font-family:Poppins}
-body{margin:0;background:#0f172a;color:#fff}
-.container{max-width:420px;margin:auto;padding:20px}
-.logo{width:120px;display:block;margin:20px auto}
-.subtitle{text-align:center;opacity:.8}
-.running{background:#020617;padding:8px;border-radius:6px;margin:15px 0;overflow:hidden}
-.running span{display:inline-block;white-space:nowrap;animation:marquee 12s linear infinite}
-@keyframes marquee{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-.card{background:#020617;padding:15px;border-radius:10px;margin-bottom:15px}
-input{width:100%;padding:10px;border-radius:6px;border:none;margin-bottom:10px}
-.btn-row{display:flex;gap:10px}
-button{flex:1;padding:10px;border:none;border-radius:6px;font-weight:600;cursor:pointer}
-.btn-login{background:#22c55e}
-.btn-reset{background:#ef4444;color:#fff}
-.links{text-align:center;font-size:13px}
-.links a{color:#38bdf8;text-decoration:none}
-h2{text-align:center;margin:20px 0 10px}
-.voucher{background:#020617;padding:15px;border-radius:10px;margin-bottom:12px}
-.voucher strong{font-size:16px}
-.voucher p{color:#22c55e;margin:5px 0 10px}
-.btn-dana{background:#2563eb;padding:10px;border-radius:6px;text-align:center;cursor:pointer}
-.confirm{margin-top:10px;display:flex;gap:10px}
-.lanjut{flex:1;background:#22c55e;color:#000;text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:600}
-.batal{flex:1;background:#ef4444;color:#fff;text-align:center;padding:10px;border-radius:6px;cursor:pointer;font-weight:600}
-.wa{display:block;margin-top:20px;background:#22c55e;color:#000;text-align:center;padding:12px;border-radius:8px;text-decoration:none;font-weight:700}
-footer{text-align:center;opacity:.6;font-size:12px;margin-top:20px}
-</style>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <div class="container">
 
-<img src="logo.png" class="logo">
-<div class="subtitle">Teknik Komputer • Kelompok 5</div>
+  <!-- LOGO -->
+  <img src="logo.png" alt="FIVENET 5" class="logo">
 
-<div class="running">
-<span>✨ Selamat Datang di FIVENET 5 • Cepat • Nyaman • Murah ✨</span>
+  <!-- SUBTITLE -->
+  <div class="subtitle">Teknik Komputer • Kelompok 5</div>
+
+  <!-- RUNNING TEXT -->
+  <div class="running">
+    <span>✨ Selamat Datang di FIVENET 5 • Cepat • Nyaman • Murah ✨</span>
+  </div>
+
+  <!-- LOGIN CARD -->
+  <div class="card">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <div class="btn-row">
+      <button class="btn-login">Login</button>
+      <button class="btn-reset">Reset</button>
+    </div>
+
+    <!-- LINKS -->
+    <div class="links">
+      <a href="#">Lupa Password</a> |
+      <a href="https://wa.me/6281937016932" target="_blank">Hubungi CS</a>
+    </div>
+  </div>
+
+  <!-- INPUT VOUCHER -->
+  <div class="card">
+    <input type="text" placeholder="Masukkan Kode Voucher">
+    <button class="btn-login">Gunakan Voucher</button>
+  </div>
+
+  <!-- TITLE -->
+  <h2>Paket Voucher</h2>
+
+  <!-- 1 JAM -->
+  <div class="voucher">
+    <div>
+      <strong>1 Jam</strong>
+      <p>Rp 2.000</p>
+    </div>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
+        <div class="batal">Batal</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- 2 JAM -->
+  <div class="voucher">
+    <div>
+      <strong>2 Jam</strong>
+      <p>Rp 4.000</p>
+    </div>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
+        <div class="batal">Batal</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- 5 JAM -->
+  <div class="voucher">
+    <div>
+      <strong>5 Jam</strong>
+      <p>Rp 10.000</p>
+    </div>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
+        <div class="batal">Batal</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- 10 JAM -->
+  <div class="voucher">
+    <div>
+      <strong>10 Jam</strong>
+      <p>Rp 18.000</p>
+    </div>
+
+    <details>
+      <summary class="btn-dana">Bayar via DANA</summary>
+      <div class="confirm">
+        <a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
+        <div class="batal">Batal</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- KONFIRMASI -->
+  <a class="wa"
+     href="https://wa.me/6281937016932?text=Halo%20Admin%20FIVENET%205,%20saya%20sudah%20melakukan%20pembayaran."
+     target="_blank">
+    💬 Konfirmasi Pembayaran via WhatsApp
+  </a>
+
+  <!-- FOOTER -->
+  <footer>© 2026 FIVENET 5 • All Rights Reserved</footer>
+
 </div>
 
-<div class="card">
-<input type="text" placeholder="Username">
-<input type="password" placeholder="Password">
-<div class="btn-row">
-<button class="btn-login">Login</button>
-<button class="btn-reset">Reset</button>
-</div>
-</div>
-
-<h2>Paket Voucher</h2>
-
-<!-- 1 JAM -->
-<div class="voucher">
-<strong>1 Jam</strong>
-<p>Rp 2.000</p>
-<details>
-<summary class="btn-dana">Bayar via DANA</summary>
-<div class="confirm">
-<a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
-<div class="batal">Batal</div>
-</div>
-</details>
-</div>
-
-<!-- 2 JAM -->
-<div class="voucher">
-<strong>2 Jam</strong>
-<p>Rp 4.000</p>
-<details>
-<summary class="btn-dana">Bayar via DANA</summary>
-<div class="confirm">
-<a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
-<div class="batal">Batal</div>
-</div>
-</details>
-</div>
-
-<!-- 5 JAM -->
-<div class="voucher">
-<strong>5 Jam</strong>
-<p>Rp 10.000</p>
-<details>
-<summary class="btn-dana">Bayar via DANA</summary>
-<div class="confirm">
-<a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
-<div class="batal">Batal</div>
-</div>
-</details>
-</div>
-
-<!-- 10 JAM -->
-<div class="voucher">
-<strong>10 Jam</strong>
-<p>Rp 18.000</p>
-<details>
-<summary class="btn-dana">Bayar via DANA</summary>
-<div class="confirm">
-<a href="https://link.dana.id/qr/081937016932" target="_blank" class="lanjut">Lanjut Bayar</a>
-<div class="batal">Batal</div>
-</div>
-</details>
-</div>
-
-<a class="wa" href="https://wa.me/6281937016932" target="_blank">
-💬 Konfirmasi Pembayaran
-</a>
-
-<footer>© 2026 FIVENET 5</footer>
-
-</div>
-
+<!-- SCRIPT BATAL -->
 <script>
-document.querySelectorAll('.batal').forEach(b=>{
-  b.onclick=()=>b.closest('details').removeAttribute('open')
-})
+  document.querySelectorAll('.batal').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      this.closest('details').removeAttribute('open');
+    });
+  });
 </script>
 
 </body>
