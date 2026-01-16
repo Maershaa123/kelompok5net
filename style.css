@@ -5,20 +5,10 @@
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #f4efe9, #e1e8f0);
-  color: #2e3a45;
+  background: linear-gradient(135deg, #f4efe9, #e7d8c9);
+  color: #4b3a2a;
 }
 
-/* BACKGROUND ORNAMEN */
-.background-pattern {
-  position: fixed;
-  inset: 0;
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
-  opacity: 0.18;
-  z-index: -1;
-}
-
-/* CONTAINER */
 .container {
   max-width: 420px;
   margin: auto;
@@ -28,43 +18,41 @@ body {
 
 /* LOGO */
 .logo {
-  width: 200px;
-  margin: 25px auto 10px;
+  width: 160px;
+  margin: 15px auto;
   display: block;
 }
 
-/* JUDUL */
+/* TITLE */
 h1 {
   margin: 5px 0;
-  color: #2d4059;
 }
 
 /* RUNNING TEXT */
 .running-text {
   overflow: hidden;
   white-space: nowrap;
-  margin: 10px 0 20px;
+  margin-bottom: 20px;
 }
 
 .running-text span {
   display: inline-block;
   padding-left: 100%;
-  animation: running 12s linear infinite;
-  color: #3c6e71;
-  font-weight: 500;
+  animation: run 12s linear infinite;
+  color: #6b4f3a;
 }
 
-@keyframes running {
+@keyframes run {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 
-/* CARD LOGIN */
+/* CARD */
 .card {
-  background: #ffffff;
+  background: #fffaf4;
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card input {
@@ -72,40 +60,40 @@ h1 {
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 10px;
-  border: 1px solid #ccd6e0;
+  border: 1px solid #d3c0ab;
 }
 
-/* BUTTON */
-.btn-row {
+/* BUTTONS */
+.btn-group {
   display: flex;
   gap: 10px;
 }
 
 .btn-login {
   flex: 1;
-  padding: 12px;
-  background: #2d4059;
-  color: #fff;
+  background: #8b5e3c;
+  color: white;
   border: none;
+  padding: 12px;
   border-radius: 10px;
 }
 
 .btn-reset {
   flex: 1;
-  padding: 12px;
-  background: #eaeaea;
+  background: #c4a484;
+  color: white;
   border: none;
+  padding: 12px;
   border-radius: 10px;
 }
 
-/* LINKS */
 .links {
   margin-top: 10px;
   font-size: 13px;
 }
 
 .links a {
-  color: #3c6e71;
+  color: #8b5e3c;
   text-decoration: none;
 }
 
@@ -115,25 +103,25 @@ h2 {
 }
 
 .voucher {
-  background: #ffffff;
+  background: #fffaf4;
   padding: 15px;
   border-radius: 14px;
-  margin: 10px 0;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.voucher span {
+.voucher p {
+  margin: 4px 0 0;
   font-weight: bold;
-  color: #2d4059;
 }
 
 /* DANA */
 .btn-dana {
-  background: #3bb4a2;
-  color: #fff;
+  background: #1aa3a3;
+  color: white;
   padding: 8px 14px;
   border-radius: 20px;
   text-decoration: none;
@@ -145,7 +133,7 @@ h2 {
   display: block;
   margin: 25px auto;
   background: #25d366;
-  color: #fff;
+  color: white;
   padding: 14px;
   border-radius: 30px;
   text-decoration: none;
@@ -154,7 +142,7 @@ h2 {
 
 /* FOOTER */
 footer {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 12px;
-  color: #6c757d;
+  color: #6a5a4a;
 }
