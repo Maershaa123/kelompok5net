@@ -1,204 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelompok 5 Net</title>
+  <meta charset="UTF-8">
+  <title>Kelompok 5 Net</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-min-height:100vh;
-background:linear-gradient(135deg,#667eea,#764ba2);
-display:flex;
-justify-content:center;
-align-items:center;
-color:#fff;
-}
-
-.container{
-width:380px;
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(14px);
-border-radius:22px;
-padding:30px;
-box-shadow:0 25px 50px rgba(0,0,0,.3);
-}
-
-/* LOGO */
-.logo{text-align:center;margin-bottom:20px;}
-.logo h2{margin-top:10px;font-weight:600}
-
-/* LOGO CIRCLE */
-.logo-circle{
-width:90px;
-height:90px;
-margin:0 auto;
-border-radius:50%;
-background:linear-gradient(135deg,#43e97b,#38f9d7);
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 12px 30px rgba(0,0,0,.4);
-}
-.logo-circle span{
-font-size:28px;
-font-weight:700;
-letter-spacing:2px;
-}
-
-/* RUNNING TEXT */
-.running-text{overflow:hidden;margin-top:6px}
-.running-text span{
-display:inline-block;
-white-space:nowrap;
-font-size:13px;
-animation:jalan 10s linear infinite;
-}
-@keyframes jalan{
-0%{transform:translateX(100%)}
-100%{transform:translateX(-100%)}
-}
-
-/* LOGIN */
-.login-box input{
-width:100%;
-padding:12px;
-border-radius:12px;
-border:none;
-margin-bottom:10px;
-}
-.login-box button{
-width:100%;
-padding:12px;
-border-radius:14px;
-border:none;
-background:linear-gradient(135deg,#ffecd2,#fcb69f);
-font-weight:bold;
-cursor:pointer;
-}
-
-/* WA */
-.wa-box{
-margin-top:14px;
-text-align:center;
-}
-.wa-box a{
-display:block;
-padding:12px;
-background:#25D366;
-color:white;
-border-radius:14px;
-font-weight:600;
-text-decoration:none;
-}
-.wa-box small{
-display:block;
-margin-top:6px;
-font-size:12px;
-}
-
-/* PRICE */
-.price-list h3{text-align:center;margin:20px 0 15px}
-.price-card{
-background:rgba(255,255,255,.15);
-border-radius:16px;
-padding:15px;
-display:flex;
-justify-content:space-between;
-margin-bottom:12px;
-}
-.price-card.internet{border-left:4px solid #4facfe}
-.price-card.gaming{border-left:4px solid #f093fb}
-.price-card button{
-padding:6px 14px;
-border-radius:10px;
-border:none;
-background:linear-gradient(135deg,#43e97b,#38f9d7);
-cursor:pointer;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
 <div class="container">
 
-<div class="logo">
-<div class="logo-circle"><span>K5</span></div>
-<h2>Kelompok 5 Net</h2>
-<div class="running-text">
-<span>✨ Selamat Datang di Kelompok 5 Net • Warnet Modern • Cepat • Nyaman • Murah ✨</span>
-</div>
-</div>
+  <!-- LOGO -->
+  <div class="logo">
+    <div class="logo-circle">
+      <span>K5</span>
+    </div>
+    <h2>Kelompok 5 Net</h2>
 
-<div class="login-box">
-<input type="text" placeholder="Username">
-<input type="password" placeholder="Password">
-<button>Login</button>
-</div>
+    <div class="running-text">
+      <span>✨ Selamat Datang di Kelompok 5 Net • Warnet Modern • Cepat • Nyaman • Murah ✨</span>
+    </div>
+  </div>
 
-<div class="wa-box">
-<a href="https://wa.me/6281937016932" target="_blank">
-💬 Chat Admin via WhatsApp
-</a>
-<small>Pembayaran via <b>DANA</b> • Kirim Bukti Transfer</small>
-</div>
+  <!-- LOGIN -->
+  <div class="login-box">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </div>
 
-<div class="price-list">
-<h3>Daftar Harga Voucher</h3>
+  <!-- INFO PEMBAYARAN -->
+  <p class="info-bayar">
+    💳 Pembayaran via <b>DANA</b><br>
+    📲 Kirim bukti ke WhatsApp Admin
+  </p>
 
-<div class="price-card internet">
-<div>Internet 1 Jam</div>
-<div>Rp 5.000<br>
-<button onclick="beli('Internet 1 Jam',5000)">Beli</button></div>
-</div>
+  <!-- DAFTAR HARGA -->
+  <div class="price-list">
+    <h3>Daftar Harga Voucher</h3>
 
-<div class="price-card internet">
-<div>Internet 2 Jam</div>
-<div>Rp 9.000<br>
-<button onclick="beli('Internet 2 Jam',9000)">Beli</button></div>
-</div>
+    <div class="price-card internet">
+      <div>
+        <h4>Voucher Internet</h4>
+        <p>Durasi 1 Jam</p>
+      </div>
+      <div class="right">
+        <span>Rp 5.000</span>
+        <button onclick="beli('Voucher Internet 1 Jam',5000)">Beli</button>
+      </div>
+    </div>
 
-<div class="price-card internet">
-<div>Internet 5 Jam</div>
-<div>Rp 20.000<br>
-<button onclick="beli('Internet 5 Jam',20000)">Beli</button></div>
-</div>
+    <div class="price-card internet">
+      <div>
+        <h4>Voucher Internet</h4>
+        <p>Durasi 2 Jam</p>
+      </div>
+      <div class="right">
+        <span>Rp 9.000</span>
+        <button onclick="beli('Voucher Internet 2 Jam',9000)">Beli</button>
+      </div>
+    </div>
 
-<div class="price-card gaming">
-<div>Gaming 1 Jam</div>
-<div>Rp 6.000<br>
-<button onclick="beli('Gaming 1 Jam',6000)">Beli</button></div>
-</div>
+    <div class="price-card internet">
+      <div>
+        <h4>Voucher Internet</h4>
+        <p>Durasi 5 Jam</p>
+      </div>
+      <div class="right">
+        <span>Rp 20.000</span>
+        <button onclick="beli('Voucher Internet 5 Jam',20000)">Beli</button>
+      </div>
+    </div>
 
-<div class="price-card gaming">
-<div>Gaming 3 Jam</div>
-<div>Rp 15.000<br>
-<button onclick="beli('Gaming 3 Jam',15000)">Beli</button></div>
-</div>
+    <div class="price-card gaming">
+      <div>
+        <h4>Voucher Gaming</h4>
+        <p>Durasi 1 Jam</p>
+      </div>
+      <div class="right">
+        <span>Rp 6.000</span>
+        <button onclick="beli('Voucher Gaming 1 Jam',6000)">Beli</button>
+      </div>
+    </div>
 
-</div>
+    <div class="price-card gaming">
+      <div>
+        <h4>Voucher Gaming</h4>
+        <p>Durasi 3 Jam</p>
+      </div>
+      <div class="right">
+        <span>Rp 15.000</span>
+        <button onclick="beli('Voucher Gaming 3 Jam',15000)">Beli</button>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <script>
-function beli(item,harga){
-const wa="6281937016932";
-const pesan=`Halo Admin Kelompok 5 Net
+function beli(item, harga) {
+  const nomorWA = "6281937016932"; // WA admin (pakai 62)
+  const pesan = `
+Halo Admin Kelompok 5 Net 👋
+
 Saya ingin membeli:
 ${item}
-Harga: Rp ${harga}
+Harga: Rp ${harga.toLocaleString()}
 
-Pembayaran via DANA
-Saya akan kirim bukti transfer`;
-window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(pesan));
+Pembayaran via DANA.
+Saya akan kirim bukti transfer.
+
+Terima kasih 🙏
+  `;
+  const linkWA = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
+  window.open(linkWA, "_blank");
 }
 </script>
 
