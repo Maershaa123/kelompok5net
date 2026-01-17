@@ -19,6 +19,7 @@ body {
 ================================= */
 .container {
     max-width: 480px;
+    width: 100%;
     margin: auto;
     background: linear-gradient(180deg, #fffaf3, #f3e5d0);
     padding: 20px;
@@ -93,13 +94,8 @@ body {
 /* ===============================
    SECTIONS
 ================================= */
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
+.section { display: none; }
+.section.active { display: block; }
 
 /* ===============================
    CARD / FORM
@@ -137,18 +133,8 @@ input[type=text], input[type=password] {
 .btn-voucher { background: #a1887f; color: #fff; }
 .btn-voucher:hover { background: #8d6e63; transform: scale(1.03); }
 
-.reset-link {
-    text-align: center;
-    margin-top: 8px;
-    font-size: 13px;
-}
-
-.reset-link a {
-    color: #6d4c41;
-    text-decoration: none;
-    font-weight: 500;
-}
-
+.reset-link { text-align: center; margin-top: 8px; font-size: 13px; }
+.reset-link a { color: #6d4c41; text-decoration: none; font-weight: 500; }
 .reset-link a:hover { text-decoration: underline; }
 
 /* ===============================
@@ -219,7 +205,6 @@ input[type=text], input[type=password] {
 
 .lanjut { background: #8d6e63; color: #fff; }
 .batal { background: #a1887f; color: #fff; }
-
 .confirmation button:hover { transform: scale(1.03); }
 
 /* ===============================
