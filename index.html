@@ -9,25 +9,18 @@
 <body>
 
 <div class="container">
-
     <img src="logo.png" class="logo">
     <div class="subtitle">Kelompok 5 • Teknik Komputer</div>
 
-    <!-- RUNNING TEXT -->
-    <div class="running-text">
-        <span>
-            ✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z yang suka cepat tapi gak ribet • FIVENET 5 — sekali connect langsung betah 😎📶
-        </span>
-    </div>
+    <div class="running-text"><span>✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z yang suka cepat tapi gak ribet • FIVENET 5 — sekali connect langsung betah 😎📶</span></div>
 
-    <!-- TABS -->
     <div class="tabs">
         <button class="tab active" onclick="openTab(event,'member')">Member</button>
         <button class="tab" onclick="openTab(event,'voucher')">Voucher</button>
         <button class="tab" onclick="openTab(event,'daftar')">Daftar Voucher</button>
     </div>
 
-    <!-- MEMBER -->
+    <!-- MEMBER LOGIN -->
     <div id="member" class="section active">
         <div class="card">
             <input type="text" placeholder="Username">
@@ -49,15 +42,15 @@
 
     <!-- DAFTAR VOUCHER -->
     <div id="daftar" class="section">
-
+        <!-- Voucher 12 Jam -->
         <div class="voucher">
             <h4>⏱️ Voucher 12 Jam</h4>
-            <p>Rp 2.000</p>
+            <p>Harga : Rp 2.000</p>
             <div class="pay">
-                <a class="dana" onclick="pilihBayar(this,'dana')">DANA</a>
-                <a class="gopay" onclick="pilihBayar(this,'gopay')">GoPay</a>
-                <a class="ovo" onclick="pilihBayar(this,'ovo')">OVO</a>
-                <a class="qris" onclick="pilihBayar(this,'qris')">QRIS</a>
+                <a href="#" class="dana" onclick="payApp(this,'dana')">DANA</a>
+                <a href="#" class="gopay" onclick="payApp(this,'gopay')">GoPay</a>
+                <a href="#" class="ovo" onclick="payApp(this,'ovo')">OVO</a>
+                <a href="#" class="qris" onclick="payApp(this,'qris')">QRIS</a>
             </div>
             <div class="confirmation">
                 <button class="lanjut">Lanjut Bayar</button>
@@ -65,14 +58,15 @@
             </div>
         </div>
 
+        <!-- Voucher 2 Hari -->
         <div class="voucher">
             <h4>⏱️ Voucher 2 Hari</h4>
-            <p>Rp 5.000</p>
+            <p>Harga : Rp 5.000</p>
             <div class="pay">
-                <a class="dana" onclick="pilihBayar(this,'dana')">DANA</a>
-                <a class="gopay" onclick="pilihBayar(this,'gopay')">GoPay</a>
-                <a class="ovo" onclick="pilihBayar(this,'ovo')">OVO</a>
-                <a class="qris" onclick="pilihBayar(this,'qris')">QRIS</a>
+                <a href="#" class="dana" onclick="payApp(this,'dana')">DANA</a>
+                <a href="#" class="gopay" onclick="payApp(this,'gopay')">GoPay</a>
+                <a href="#" class="ovo" onclick="payApp(this,'ovo')">OVO</a>
+                <a href="#" class="qris" onclick="payApp(this,'qris')">QRIS</a>
             </div>
             <div class="confirmation">
                 <button class="lanjut">Lanjut Bayar</button>
@@ -80,14 +74,15 @@
             </div>
         </div>
 
+        <!-- Voucher 5 Hari -->
         <div class="voucher">
             <h4>⏱️ Voucher 5 Hari</h4>
-            <p>Rp 10.000</p>
+            <p>Harga : Rp 10.000</p>
             <div class="pay">
-                <a class="dana" onclick="pilihBayar(this,'dana')">DANA</a>
-                <a class="gopay" onclick="pilihBayar(this,'gopay')">GoPay</a>
-                <a class="ovo" onclick="pilihBayar(this,'ovo')">OVO</a>
-                <a class="qris" onclick="pilihBayar(this,'qris')">QRIS</a>
+                <a href="#" class="dana" onclick="payApp(this,'dana')">DANA</a>
+                <a href="#" class="gopay" onclick="payApp(this,'gopay')">GoPay</a>
+                <a href="#" class="ovo" onclick="payApp(this,'ovo')">OVO</a>
+                <a href="#" class="qris" onclick="payApp(this,'qris')">QRIS</a>
             </div>
             <div class="confirmation">
                 <button class="lanjut">Lanjut Bayar</button>
@@ -97,58 +92,48 @@
 
     </div>
 
-    <!-- CS -->
-    <a class="wa" onclick="hubungiCS()">💬 Hubungi CS / Admin</a>
-
+    <a class="wa" href="#" id="hubungiCS">💬 Hubungi CS / Admin</a>
     <footer>© 2026 FIVENET 5</footer>
 </div>
 
 <script>
-function openTab(e, id){
+function openTab(event, tab){
     document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    e.target.classList.add('active');
+    document.getElementById(tab).classList.add('active');
+    event.target.classList.add('active');
 }
 
-function pilihBayar(el, metode){
-    const voucher = el.closest('.voucher');
-    const box = voucher.querySelector('.confirmation');
+function payApp(el,method){
+    let confirmation = el.closest('.voucher').querySelector('.confirmation');
+    confirmation.style.display='flex'; // tampilkan tombol lanjut/batal
 
-    // tampilkan konfirmasi
-    box.style.display = 'flex';
-    voucher.querySelectorAll('.pay a').forEach(b=>b.classList.remove('active'));
-    el.classList.add('active');
+    let lanjut = confirmation.querySelector('.lanjut');
+    let batal = confirmation.querySelector('.batal');
 
-    // lanjut bayar
-    box.querySelector('.lanjut').onclick = () => {
-        let link = metode === 'dana' ? 'dana://pay' :
-                   metode === 'gopay' ? 'gopay://' :
-                   metode === 'ovo' ? 'ovo://' :
-                   'https://qris.id';
-        window.location.href = link;
-    };
+    lanjut.onclick=function(e){
+        e.preventDefault();
+        let appLink = "#";
+        switch(method){
+            case 'dana': appLink='dana://home'; break;
+            case 'gopay': appLink='gopay://'; break;
+            case 'ovo': appLink='ovo://'; break;
+            case 'qris': appLink='https://linkqris.com'; break;
+        }
+        window.open(appLink,'_blank');
+        confirmation.style.display='none';
+    }
 
-    // batal
-    box.querySelector('.batal').onclick = () => {
-        box.style.display = 'none';
-        el.classList.remove('active');
-    };
+    batal.onclick=function(){
+        confirmation.style.display='none';
+    }
 }
 
-// hubungi CS
-function hubungiCS(){
-    let msg = encodeURIComponent(
-        "Halo Admin FIVENET 5 👋\nSaya ingin bertanya / membutuhkan bantuan.\n\nNama:\nJenis Voucher:\nKendala:\n\nTerima kasih 🙏"
-    );
-    window.open("https://wa.me/6281937016932?text="+msg,"_blank");
+document.getElementById('hubungiCS').onclick = function(e){
+    e.preventDefault();
+    let pesanCS=encodeURIComponent("Halo CS FIVENET 5,\nSaya ingin bertanya / butuh bantuan terkait voucher.");
+    window.open(`https://wa.me/6281937016932?text=${pesanCS}`,'_blank');
 }
-
-// running text langsung jalan saat halaman dibuka
-document.addEventListener('DOMContentLoaded', () => {
-    const span = document.querySelector('.running-text span');
-    span.style.animationPlayState = 'running';
-});
 </script>
 
 </body>
