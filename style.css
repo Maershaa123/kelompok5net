@@ -1,153 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIVENET 5</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+<div class="container">
+    <img src="logo.png" class="logo">
+    <div class="subtitle">Kelompok 5 • Teknik Komputer</div>
 
-body{
-    background:#fdf6e3;
-    padding:20px;
-    color:#4e342e;
+    <div class="running-text"><span>✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z yang suka cepat tapi gak ribet • FIVENET 5 — sekali connect langsung betah 😎📶</span></div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event,'member')">Member</button>
+        <button class="tab" onclick="openTab(event,'voucher')">Voucher</button>
+        <button class="tab" onclick="openTab(event,'daftar')">Daftar Voucher</button>
+    </div>
+
+    <!-- MEMBER LOGIN -->
+    <div id="member" class="section active">
+        <div class="card">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button class="btn btn-login">Login Member</button>
+            <div class="reset-link">
+                <a href="#">Lupa Password?</a> | <a href="#">Reset Akun</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- INPUT VOUCHER -->
+    <div id="voucher" class="section">
+        <div class="card">
+            <input type="text" placeholder="Masukkan Kode Voucher">
+            <button class="btn btn-voucher">Gunakan Voucher</button>
+        </div>
+    </div>
+
+    <!-- DAFTAR VOUCHER -->
+    <div id="daftar" class="section">
+        <!-- Voucher 12 Jam -->
+        <div class="voucher">
+            <h4>⏱️ Voucher 12 Jam</h4>
+            <p>Harga : Rp 2.000</p>
+            <div class="pay">
+                <a href="#" class="dana" onclick="payApp(this,'dana')">DANA</a>
+                <a href="#" class="gopay" onclick="payApp(this,'gopay')">GoPay</a>
+                <a href="#" class="ovo" onclick="payApp(this,'ovo')">OVO</a>
+                <a href="#" class="qris" onclick="payApp(this,'qris')">QRIS</a>
+            </div>
+            <div class="confirmation">
+                <button class="lanjut">Lanjut Bayar</button>
+                <button class="batal">Batal</button>
+            </div>
+        </div>
+
+        <!-- Voucher 2 Hari -->
+        <div class="voucher">
+            <h4>⏱️ Voucher 2 Hari</h4>
+            <p>Harga : Rp 5.000</p>
+            <div class="pay">
+                <a href="#" class="dana" onclick="payApp(this,'dana')">DANA</a>
+                <a href="#" class="gopay" onclick="payApp(this,'gopay')">GoPay</a>
+                <a href="#" class="ovo" onclick="payApp(this,'ovo')">OVO</a>
+                <a href="#" class="qris" onclick="payApp(this,'qris')">QRIS</a>
+            </div>
+            <div class="confirmation">
+                <button class="lanjut">Lanjut Bayar</button>
+                <button class="batal">Batal</button>
+            </div>
+        </div>
+
+        <!-- Voucher 5 Hari -->
+        <div class="voucher">
+            <h4>⏱️ Voucher 5 Hari</h4>
+            <p>Harga : Rp 10.000</p>
+            <div class="pay">
+                <a href="#" class="dana" onclick="payApp(this,'dana')">DANA</a>
+                <a href="#" class="gopay" onclick="payApp(this,'gopay')">GoPay</a>
+                <a href="#" class="ovo" onclick="payApp(this,'ovo')">OVO</a>
+                <a href="#" class="qris" onclick="payApp(this,'qris')">QRIS</a>
+            </div>
+            <div class="confirmation">
+                <button class="lanjut">Lanjut Bayar</button>
+                <button class="batal">Batal</button>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="wa" href="#" id="hubungiCS">💬 Hubungi CS / Admin</a>
+    <footer>© 2026 FIVENET 5</footer>
+</div>
+
+<script>
+function openTab(event, tab){
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.getElementById(tab).classList.add('active');
+    event.target.classList.add('active');
 }
 
-.container{
-    max-width:480px;
-    margin:auto;
-    background:linear-gradient(180deg,#fffaf3,#f3e5d0);
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
+function payApp(el,method){
+    let confirmation = el.closest('.voucher').querySelector('.confirmation');
+    confirmation.style.display='flex'; // tampilkan tombol lanjut/batal
+
+    let lanjut = confirmation.querySelector('.lanjut');
+    let batal = confirmation.querySelector('.batal');
+
+    lanjut.onclick=function(e){
+        e.preventDefault();
+        let appLink = "#";
+        switch(method){
+            case 'dana': appLink='dana://home'; break;
+            case 'gopay': appLink='gopay://'; break;
+            case 'ovo': appLink='ovo://'; break;
+            case 'qris': appLink='https://linkqris.com'; break;
+        }
+        window.open(appLink,'_blank');
+        confirmation.style.display='none';
+    }
+
+    batal.onclick=function(){
+        confirmation.style.display='none';
+    }
 }
 
-.logo{width:120px;display:block;margin:auto;}
-.subtitle{text-align:center;margin:10px 0 15px;font-weight:600;}
-
-.running-text{
-    background:#e0d3c2;
-    border-radius:14px;
-    padding:10px;
-    overflow:hidden;
-    white-space:nowrap;
-    font-weight:600;
+document.getElementById('hubungiCS').onclick = function(e){
+    e.preventDefault();
+    let pesanCS=encodeURIComponent("Halo CS FIVENET 5,\nSaya ingin bertanya / butuh bantuan terkait voucher.");
+    window.open(`https://wa.me/6281937016932?text=${pesanCS}`,'_blank');
 }
+</script>
 
-.running-text span{
-    display:inline-block;
-    padding-left:100%;
-    animation:marquee 22s linear infinite;
-    animation-play-state: paused; /* akan dijalankan via JS */
-}
-
-@keyframes marquee{
-    from{transform:translateX(100%);}
-    to{transform:translateX(-100%);}
-}
-
-.tabs{display:flex;gap:6px;margin:15px 0;}
-.tab{
-    flex:1;
-    padding:10px;
-    border-radius:12px;
-    border:none;
-    background:#d7ccc8;
-    font-weight:600;
-}
-.tab.active{background:#8d6e63;color:#fff;}
-
-.section{display:none;}
-.section.active{display:block;}
-
-.card{
-    background:#fff3e0;
-    padding:20px;
-    border-radius:16px;
-    margin-bottom:15px;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    border-radius:12px;
-    border:1px solid #d7ccc8;
-    margin-bottom:12px;
-}
-
-.btn{
-    width:100%;
-    padding:12px;
-    border-radius:12px;
-    border:none;
-    font-weight:600;
-}
-.btn-login{background:#8d6e63;color:#fff;}
-.btn-voucher{background:#a1887f;color:#fff;}
-
-.voucher{
-    background:#f5f5dc;
-    border-radius:18px;
-    padding:15px;
-    margin-bottom:15px;
-    box-shadow:0 6px 18px rgba(0,0,0,.1);
-}
-
-.voucher h4{margin-bottom:4px;}
-.voucher p{margin-bottom:10px;font-weight:600;}
-
-.pay{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-}
-
-.pay a{
-    display:inline-block;
-    padding:10px 16px;
-    border-radius:12px;
-    color:#fff;
-    font-weight:600;
-    flex:1 1 45%;
-    text-align:center;
-    cursor:pointer;
-}
-
-.dana{background:#8d6e63;}
-.gopay{background:#a1887f;}
-.ovo{background:#bc8f8f;}
-.qris{background:#d2b48c;color:#4e342e;}
-
-.confirmation{
-    display:none;
-    gap:10px;
-    margin-top:12px;
-    flex-direction:row;
-}
-
-.confirmation button{
-    flex:1;
-    padding:12px;
-    border-radius:12px;
-    border:none;
-    font-weight:600;
-    cursor:pointer;
-}
-.lanjut{background:#8d6e63;color:#fff;}
-.batal{background:#a1887f;color:#fff;}
-
-.wa{
-    display:block;
-    margin-top:15px;
-    text-align:center;
-    background:#5d4037;
-    color:#fff;
-    padding:14px;
-    border-radius:14px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-footer{text-align:center;font-size:12px;margin-top:15px;}
-
-@media(max-width:480px){
-    .running-text{font-size:13px;}
-    .voucher{padding:12px;}
-    .pay a{padding:10px;font-size:13px;}
-    .confirmation button{padding:10px;font-size:13px;}
-}
+</body>
+</html>
