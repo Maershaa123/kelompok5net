@@ -6,8 +6,8 @@
 <title>FIVENET 5</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
 <div class="container">
 
     <img src="logo.png" class="logo">
@@ -16,8 +16,7 @@
     <!-- RUNNING TEXT -->
     <div class="running-text">
         <span>
-            ✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • 
-            Cocok buat Gen Z yang suka cepat tapi gak ribet • FIVENET 5 — sekali connect langsung betah 😎📶
+            ✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z yang suka cepat tapi gak ribet • FIVENET 5 — sekali connect langsung betah 😎📶
         </span>
     </div>
 
@@ -51,7 +50,6 @@
     <!-- DAFTAR VOUCHER -->
     <div id="daftar" class="section">
 
-        <!-- VOUCHER ITEM -->
         <div class="voucher">
             <h4>⏱️ Voucher 12 Jam</h4>
             <p>Rp 2.000</p>
@@ -114,30 +112,43 @@ function openTab(e, id){
 }
 
 function pilihBayar(el, metode){
-    let box = el.closest('.voucher').querySelector('.confirmation');
-    box.style.display = 'block';
+    const voucher = el.closest('.voucher');
+    const box = voucher.querySelector('.confirmation');
 
+    // tampilkan konfirmasi
+    box.style.display = 'flex';
+    voucher.querySelectorAll('.pay a').forEach(b=>b.classList.remove('active'));
+    el.classList.add('active');
+
+    // lanjut bayar
     box.querySelector('.lanjut').onclick = () => {
-        let link = metode==='dana'?'dana://pay':
-                   metode==='gopay'?'gopay://':
-                   metode==='ovo'?'ovo://':
+        let link = metode === 'dana' ? 'dana://pay' :
+                   metode === 'gopay' ? 'gopay://' :
+                   metode === 'ovo' ? 'ovo://' :
                    'https://qris.id';
         window.location.href = link;
     };
 
+    // batal
     box.querySelector('.batal').onclick = () => {
         box.style.display = 'none';
+        el.classList.remove('active');
     };
 }
 
+// hubungi CS
 function hubungiCS(){
     let msg = encodeURIComponent(
-        "Halo Admin FIVENET 5 👋\n" +
-        "Saya ingin bertanya / membutuhkan bantuan.\n\n" +
-        "Nama:\nJenis Voucher:\nKendala:\n\nTerima kasih 🙏"
+        "Halo Admin FIVENET 5 👋\nSaya ingin bertanya / membutuhkan bantuan.\n\nNama:\nJenis Voucher:\nKendala:\n\nTerima kasih 🙏"
     );
     window.open("https://wa.me/6281937016932?text="+msg,"_blank");
 }
+
+// running text langsung jalan saat halaman dibuka
+document.addEventListener('DOMContentLoaded', () => {
+    const span = document.querySelector('.running-text span');
+    span.style.animationPlayState = 'running';
+});
 </script>
 
 </body>
