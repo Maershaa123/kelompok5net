@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FIVENET 5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIVENET 5</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
+    <!-- Logo -->
     <img src="logo.png" class="logo" alt="FIVENET Logo">
     <div class="subtitle">Kelompok 5 • Teknik Komputer</div>
 
+    <!-- Running Text -->
     <div class="running-text">
-        <span>✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z yang suka cepat tapi gak ribet • FIVENET 5 — sekali connect langsung betah 😎📶</span>
+        <span>✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z • FIVENET 5 — sekali connect langsung betah 😎📶</span>
     </div>
 
-    <!-- TABS -->
+    <!-- Tabs -->
     <div class="tabs">
         <button class="tab active" onclick="openTab(event,'member')">Member</button>
         <button class="tab" onclick="openTab(event,'voucher')">Voucher</button>
@@ -51,7 +52,6 @@
 
     <!-- DAFTAR VOUCHER -->
     <div id="daftar" class="section">
-
         <!-- Voucher Template -->
         <div class="voucher">
             <h4>⏱️ Voucher 12 Jam</h4>
@@ -97,13 +97,15 @@
                 <button class="batal">Batal</button>
             </div>
         </div>
-
     </div>
 
+    <!-- CS Button -->
     <a class="wa" href="#" id="hubungiCS">💬 Hubungi CS / Admin</a>
+
     <footer>© 2026 FIVENET 5</footer>
 </div>
 
+<!-- JS -->
 <script>
 function openTab(event, tab){
     document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
@@ -121,7 +123,7 @@ function payApp(el,method){
 
     lanjut.onclick=function(e){
         e.preventDefault();
-        let appLink = "#";
+        let appLink = "#"; // agar aman di laptop & HP
         switch(method){
             case 'dana': appLink='dana://home'; break;
             case 'gopay': appLink='gopay://'; break;
