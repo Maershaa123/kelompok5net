@@ -20,7 +20,11 @@
 
     <!-- Running Text -->
     <div class="running-text">
-        <span>✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z • FIVENET 5 — sekali connect langsung betah 😎📶</span>
+        <div class="marquee">
+            <span>
+                ✨ Internet stabil tanpa ngelag • Scroll TikTok anti buffering • Main game & streaming aman • Cocok buat Gen Z • FIVENET 5 — sekali connect langsung betah 😎📶
+            </span>
+        </div>
     </div>
 
     <!-- Tabs -->
@@ -52,7 +56,6 @@
 
     <!-- DAFTAR VOUCHER -->
     <div id="daftar" class="section">
-        <!-- Voucher Template -->
         <div class="voucher">
             <h4>⏱️ Voucher 12 Jam</h4>
             <p>Harga : Rp 2.000</p>
@@ -100,7 +103,9 @@
     </div>
 
     <!-- CS Button -->
-    <a class="wa" href="#" id="hubungiCS">💬 Hubungi CS / Admin</a>
+    <a class="wa" href="https://wa.me/6281937016932?text=Halo%20CS%20FIVENET%205%2C%20saya%20ingin%20bertanya%20atau%20butuh%20bantuan%20terkait%20voucher." target="_blank">
+        💬 Hubungi CS / Admin
+    </a>
 
     <footer>© 2026 FIVENET 5</footer>
 </div>
@@ -123,7 +128,7 @@ function payApp(el,method){
 
     lanjut.onclick=function(e){
         e.preventDefault();
-        let appLink = "#"; // agar aman di laptop & HP
+        let appLink = "#"; // aman di laptop & HP
         switch(method){
             case 'dana': appLink='dana://home'; break;
             case 'gopay': appLink='gopay://'; break;
@@ -137,12 +142,6 @@ function payApp(el,method){
     batal.onclick=function(){
         confirmation.style.display='none';
     }
-}
-
-document.getElementById('hubungiCS').onclick = function(e){
-    e.preventDefault();
-    let pesanCS=encodeURIComponent("Halo CS FIVENET 5,\nSaya ingin bertanya / butuh bantuan terkait voucher.");
-    window.open(`https://wa.me/6281937016932?text=${pesanCS}`,'_blank');
 }
 </script>
 
